@@ -1,0 +1,55 @@
+{
+  "file_size_mb": 492.58,
+  "total_rows": 2811774,
+  "columns": [
+    "tweet_id",
+    "author_id",
+    "inbound",
+    "created_at",
+    "text",
+    "response_tweet_id",
+    "in_response_to_tweet_id"
+  ],
+  "null_counts": {
+    "tweet_id": 0,
+    "author_id": 0,
+    "inbound": 0,
+    "created_at": 0,
+    "text": 0,
+    "response_tweet_id": 1040629,
+    "in_response_to_tweet_id": 794335
+  },
+  "inbound_counts": {
+    "True": 1537843,
+    "False": 1273931
+  },
+  "root_tweets": 794335,
+  "reply_tweets": 2017439,
+  "tweets_with_responses": 1771145,
+  "top_20_brands": {
+    "AmazonHelp": 169840,
+    "AppleSupport": 106860,
+    "Uber_Support": 56270,
+    "SpotifyCares": 43265,
+    "Delta": 42253,
+    "Tesco": 38573,
+    "AmericanAir": 36764,
+    "TMobileHelp": 34317,
+    "comcastcares": 33031,
+    "British_Airways": 29361,
+    "SouthwestAir": 28977,
+    "VirginTrains": 27817,
+    "Ask_Spectrum": 25860,
+    "XboxSupport": 24557,
+    "sprintcare": 22381,
+    "hulu_support": 21872,
+    "sainsburys": 19466,
+    "GWRHelp": 19364,
+    "AskPlayStation": 19098,
+    "ChipotleTweets": 18749
+  },
+  "uber_brands": {
+    "Uber_Support": 56270
+  },
+  "uber_text_mentions": 55604
+}
