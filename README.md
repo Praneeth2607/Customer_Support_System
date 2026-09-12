@@ -22,8 +22,8 @@ Built for the **Hiver SDE Intern Take-Home Assignment**.
 | Step | Description | Status | Key Artifacts |
 |---|---|---|---|
 | **Step 1** | **Dataset Audit & Schema Inspection** | 🟢 **Completed** | `src/data/audit_dataset.py`, `data/audit/audit_summary.json`, `tests/test_audit.py` |
-| **Step 2** | Uber Support Brand Validation & Extraction | ⚪ *Next Step* | `src/data/extract_uber.py` |
-| **Step 3** | Conversation Thread Reconstruction | ⚪ Pending | `src/data/reconstruct_conversations.py` |
+| **Step 2** | **Uber Support Brand Extraction & Audit** | 🟢 **Completed** | `src/data/extract_uber.py`, `data/processed/uber_tweets.csv`, `tests/test_extraction.py` |
+| **Step 3** | Conversation Thread Reconstruction | ⚪ *Next Step* | `src/data/reconstruct_conversations.py` |
 | **Step 4** | Intent Discovery & Taxonomy Definition | ⚪ Pending | `docs/intent_taxonomy.md` |
 | **Step 5** | Golden Evaluation Set (150–250 cases) | ⚪ Pending | `data/golden/golden_evaluation_set.json` |
 | **Step 6** | Baseline Models (Majority + TF-IDF + LogReg) | ⚪ Pending | `src/classification/baselines.py` |
@@ -32,6 +32,29 @@ Built for the **Hiver SDE Intern Take-Home Assignment**.
 | **Step 9** | LLM-as-a-Judge Calibration with Human Agreement | ⚪ Pending | `evaluation/llm_judge.py` |
 | **Step 10** | Failure Mode Analysis (Top 5 Failures & Hypotheses) | ⚪ Pending | `reports/failure_analysis.md` |
 | **Step 11** | Report, Decision Log & Final Reproducibility Run | ⚪ Pending | `reports/final_report.md`, `docs/DECISION_LOG.md` |
+
+---
+
+## 🚕 Step 2 Findings: Uber Extraction & Conversation Graph Summary
+
+Extracted using a two-pass graph-aware collection algorithm:
+* **Total Extracted Tweets**: **125,528** rows (`data/processed/uber_tweets.csv`, 21.86 MB)
+  * **Customer Inbound Tweets**: 69,258 (55.17%)
+  * **Uber Outbound Responses**: 56,270 (44.83%)
+* **Unique Customers**: **39,459** distinct users
+* **Conversation Graph Linkages**:
+  * **Total Threads**: 42,661 conversation trees
+  * **Usable Paired Conversations**: **42,607** (99.87% of all threads have at least 1 customer tweet and 1 Uber reply)
+  * **Multi-Turn Conversations ($\ge 3$ tweets)**: 14,284 threads (33.48%)
+  * **Unanswered Customer Inquiries**: Only 54 threads
+* **Thread Length Distribution**:
+  * **Mean**: 2.94 tweets per thread
+  * **Median**: 2.0 tweets per thread
+  * **Max**: 385 tweets in a single high-engagement thread
+* **Text Repetition & Quality**:
+  * **Customer Text Duplicate Rate**: 2.58% (exceptionally high lexical diversity)
+  * **Uber Outbound Duplicate Rate**: 0.13% (minimal copy-paste bot spam)
+
 
 ---
 

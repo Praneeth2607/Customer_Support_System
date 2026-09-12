@@ -1,0 +1,37 @@
+{
+  "total_extracted_tweets": 125528,
+  "customer_inbound_tweets": 69258,
+  "uber_outbound_responses": 56270,
+  "unique_customers": 39459,
+  "total_conversation_threads": 42661,
+  "usable_conversations_with_replies": 42607,
+  "multi_turn_conversations_3plus": 14284,
+  "customer_unanswered_threads": 54,
+  "thread_length_mean": 2.94,
+  "thread_length_median": 2.0,
+  "thread_length_max": 385,
+  "customer_text_duplicate_rate_pct": 2.58,
+  "uber_response_duplicate_rate_pct": 0.13,
+  "top_5_uber_response_templates": [
+    {
+      "template": "@493817 here to help. a member of our team has followed up via dm....",
+      "frequency": 3
+    },
+    {
+      "template": "@255903 we see your message and will be following up via dm....",
+      "frequency": 3
+    },
+    {
+      "template": "@664119 we've replied via dm, please follow up there....",
+      "frequency": 3
+    },
+    {
+      "template": "@121903 we see your outreach and a member of our team will be following up via email as soon as possible. we appreciate ...",
+      "frequency": 2
+    },
+    {
+      "template": "@129058 we've responded via dm, please check your messages....",
+      "frequency": 2
+    }
+  ]
+}

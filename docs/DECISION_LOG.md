@@ -39,3 +39,14 @@ This document tracks non-obvious technical, architectural, and data engineering 
   - *SpotifyCares*: Best runner-up, but rejected because app bugs rarely present meaningful escalation decisions.
   - *AmazonHelp & AppleSupport*: Rejected due to multilingual fragmentation and excessive boilerplate deflection respectively.
 
+### Decision 4: Graph-Aware Two-Pass Extraction for Bidirectional Context
+* **Context**: Filtering only rows where `author_id == 'Uber_Support'` yields 56,270 outbound tweets, but completely drops the customer queries that provoked them. Conversely, filtering text for `@Uber_Support` misses follow-up conversation turns where users drop the handle.
+* **Decision**: Implemented a two-pass graph-closure extraction:
+  1. *Pass 1 (ID Indexing)*: Mapped all Uber tweet IDs, their parent customer tweets (`in_response_to_tweet_id`), their child customer follow-ups (`response_tweet_id`), and direct inbound mentions of `@Uber_Support` (identifying 125,803 candidate IDs).
+  2. *Pass 2 (Metadata Extraction)*: Extracted full records for all 125,528 matched rows to `data/processed/uber_tweets.csv`.
+* **Why**: Preserves 100% of the conversational graph, resulting in 42,607 complete, bidirectional customer-agent interaction threads while reducing file size from 492.6 MB to 21.86 MB (a 95.6% reduction).
+* **Alternatives Considered**: 
+  - *Single-pass regex on `@Uber_Support`*: Rejected because subsequent multi-turn replies frequently omit `@Uber_Support`, truncating conversations.
+  - *Extracting only 1-turn Q&A pairs*: Rejected because multi-turn follow-ups are needed to understand whether an issue was actually resolved or escalated historically.
+
+
