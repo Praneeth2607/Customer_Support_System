@@ -23,15 +23,57 @@ Built for the **Hiver SDE Intern Take-Home Assignment**.
 |---|---|---|---|
 | **Step 1** | **Dataset Audit & Schema Inspection** | 🟢 **Completed** | `src/data/audit_dataset.py`, `data/audit/audit_summary.json`, `tests/test_audit.py` |
 | **Step 2** | **Uber Support Brand Extraction & Audit** | 🟢 **Completed** | `src/data/extract_uber.py`, `data/processed/uber_tweets.csv`, `tests/test_extraction.py` |
-| **Step 3** | Conversation Thread Reconstruction | ⚪ *Next Step* | `src/data/reconstruct_conversations.py` |
-| **Step 4** | Intent Discovery & Taxonomy Definition | ⚪ Pending | `docs/intent_taxonomy.md` |
-| **Step 5** | Golden Evaluation Set (150–250 cases) | ⚪ Pending | `data/golden/golden_evaluation_set.json` |
+| **Step 3** | **Conversation Thread Reconstruction** | 🟢 **Completed** | `src/data/reconstruct_conversations.py`, `data/processed/uber_conversations.json`, `tests/test_reconstruction.py` |
+| **Step 4** | **Intent Discovery & Taxonomy Definition** | 🟢 **Completed** | `src/classification/discover_intents.py`, `docs/intent_taxonomy.md`, `tests/test_taxonomy.py` |
+| **Step 5** | Golden Evaluation Set (150–250 cases) | ⚪ *Next Step* | `data/golden/golden_evaluation_set.json` |
 | **Step 6** | Baseline Models (Majority + TF-IDF + LogReg) | ⚪ Pending | `src/classification/baselines.py` |
 | **Step 7** | Retrieval & AI Support Agent Pipeline | ⚪ Pending | `src/pipeline/support_agent.py` |
 | **Step 8** | Automated Evaluation Harness | ⚪ Pending | `evaluation/eval_harness.py` |
 | **Step 9** | LLM-as-a-Judge Calibration with Human Agreement | ⚪ Pending | `evaluation/llm_judge.py` |
 | **Step 10** | Failure Mode Analysis (Top 5 Failures & Hypotheses) | ⚪ Pending | `reports/failure_analysis.md` |
 | **Step 11** | Report, Decision Log & Final Reproducibility Run | ⚪ Pending | `reports/final_report.md`, `docs/DECISION_LOG.md` |
+
+---
+
+## 🎯 Step 4 Findings: Empirical Intent Taxonomy Summary
+
+Derived via TF-IDF n-gram extraction and K-Means clustering across 42,186 customer inquiries:
+
+| Intent Name | Core Problem Space | Sample Indicator Keywords | Default Escalation Policy |
+|---|---|---|---|
+| **`cancellation_issue`** | Cancellation fees, driver no-show cancels | `cancel`, `cancellation fee`, `charged 5` | Conditional Auto-Handle (provide waiver flow) |
+| **`fare_and_payment_dispute`** | Overcharges, double billing, tolls, surge | `charged twice`, `overcharged`, `refund`, `fare` | Conditional Auto-Handle (escalate if >$50 or fraud) |
+| **`lost_item`** | Phone, wallet, keys left in vehicle | `left phone`, `lost wallet`, `back seat` | **Auto-Handle** (direct driver contact portal) |
+| **`driver_conduct_and_safety`** | Reckless driving, verbal abuse, harassment | `unsafe`, `reckless`, `rude`, `threatened` | **MANDATORY ESCALATE (100%)** (Route to safety team) |
+| **`pickup_and_route_issue`** | Wrong pickup, detours, car not moving | `wrong route`, `detour`, `refused to go` | Conditional Auto-Handle (route review link) |
+| **`account_and_promo_issue`** | Promo code failure, login/2FA, Ride Pass | `promo code`, `discount`, `login locked` | Conditional Auto-Handle (escalate if deactivated) |
+
+* **Multi-Intent Precedence**: `Safety` > `Lost Item` > `Cancellation` > `Fare Dispute` > `Route` > `Account/Promo`.
+* Complete taxonomy documented in [`docs/intent_taxonomy.md`](file:///c:/Users/study/OneDrive/Desktop/Projects/Customer_Support_System/docs/intent_taxonomy.md) and coded in [`src/classification/taxonomy.py`](file:///c:/Users/study/OneDrive/Desktop/Projects/Customer_Support_System/src/classification/taxonomy.py).
+
+
+---
+
+## 💬 Step 3 Findings: Conversation Reconstruction & Normalization Summary
+
+Reconstructed and normalized into chronological, structured dialogue objects:
+* **Total Usable Conversations**: **42,368** complete dialogues (`data/processed/uber_conversations.json`, 81.83 MB)
+* **Quality Filtering**:
+  * Filtered out 71 threads with no brand reply.
+  * Filtered out 145 low-signal tweets consisting purely of `@Uber_Support` mentions without any problem description.
+* **Conversational Depth**:
+  * **2-Turn Direct Interactions** (Customer $\rightarrow$ Uber): **29,042** conversations (68.55%)
+  * **Multi-Turn Dialogues** ($\ge 3$ turns): **13,326** conversations (31.45%)
+  * **Average Turns per Dialogue**: **2.60**
+* **Linguistic & Content Richness**:
+  * **Average Initial Customer Query Length**: **21.37 words** (substantive customer context)
+  * **DM Deflection Rate**: **37.62%**
+  * **Help URL Grounding Rate**: **63.06%** (brand embeds actionable support/resolution links)
+* **Text Normalization Applied**:
+  * Stripped noisy leading Twitter handles (`@Uber_Support`, `@115872`) while preserving text semantic tokens.
+  * Unescaped HTML entities (`&amp;` $\rightarrow$ `&`).
+  * Replaced volatile `t.co` shortened links with canonical `[URL]` tokens.
+
 
 ---
 
@@ -86,11 +128,21 @@ The raw dataset (`twcs.csv`) was fully scanned in memory-efficient 200,000-row c
 ## 🛠️ How to Reproduce Current Step
 
 ```bash
-# 1. Run the dataset audit script
+# Step 1: Run dataset audit and tests
 python src/data/audit_dataset.py
-
-# 2. Run deterministic unit tests
 python -m pytest tests/test_audit.py
+
+# Step 2: Extract Uber corpus and run graph audit
+python src/data/extract_uber.py
+python -m pytest tests/test_extraction.py
+
+# Step 3: Reconstruct conversation dialogues and run validation tests
+python src/data/reconstruct_conversations.py
+python -m pytest tests/test_reconstruction.py
+
+# Step 4: Run intent discovery and validate taxonomy
+python src/classification/discover_intents.py
+python -m pytest tests/test_taxonomy.py
 ```
 
 ---

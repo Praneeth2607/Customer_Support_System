@@ -1,0 +1,62 @@
+{
+  "total_conversations": 42368,
+  "skipped_empty_text": 145,
+  "total_messages_reconstructed": 110291,
+  "turn_distribution": {
+    "2": 29042,
+    "3": 5495,
+    "4": 5028,
+    "5": 1208,
+    "6": 1595
+  },
+  "two_turn_pairs": 29042,
+  "multi_turn_conversations_3plus": 13326,
+  "avg_turns_per_conversation": 2.6,
+  "median_turns_per_conversation": 2.0,
+  "max_turns_capped": 6,
+  "avg_customer_query_words": 21.37,
+  "dm_deflection_rate_pct": 37.62,
+  "help_url_presence_rate_pct": 63.06,
+  "sample_conversation": {
+    "conversation_id": "conv_771",
+    "root_tweet_id": 771,
+    "customer_id": "115872",
+    "created_at": "Tue Oct 31 22:12:00 +0000 2017",
+    "num_turns": 3,
+    "first_customer_query": "@115873 you need to correct false charges from a trip in Lexington KY on Saturday. I want my $13 back #lyingdriver #theft",
+    "first_customer_query_clean": "you need to correct false charges from a trip in Lexington KY on Saturday. I want my $13 back #lyingdriver #theft",
+    "first_brand_response": "@115872 Happy to follow up! Contact us via https://t.co/1xM0TILvAI so we can connect.",
+    "first_brand_response_clean": "Happy to follow up! Contact us via [URL] so we can connect.",
+    "has_dm_deflection": false,
+    "has_help_url": true,
+    "messages": [
+      {
+        "turn": 1,
+        "tweet_id": 771,
+        "speaker": "customer",
+        "author_id": "115872",
+        "created_at": "Tue Oct 31 22:12:00 +0000 2017",
+        "text": "@115873 you need to correct false charges from a trip in Lexington KY on Saturday. I want my $13 back #lyingdriver #theft",
+        "text_clean": "you need to correct false charges from a trip in Lexington KY on Saturday. I want my $13 back #lyingdriver #theft"
+      },
+      {
+        "turn": 2,
+        "tweet_id": 768,
+        "speaker": "uber",
+        "author_id": "Uber_Support",
+        "created_at": "Tue Oct 31 22:28:17 +0000 2017",
+        "text": "@115872 Happy to follow up! Contact us via https://t.co/1xM0TILvAI so we can connect.",
+        "text_clean": "Happy to follow up! Contact us via [URL] so we can connect."
+      },
+      {
+        "turn": 3,
+        "tweet_id": 769,
+        "speaker": "customer",
+        "author_id": "115872",
+        "created_at": "Tue Oct 31 22:30:07 +0000 2017",
+        "text": "@Uber_Support Already did that was told we requested to dropped off somewhere different which is completely false.",
+        "text_clean": "Already did that was told we requested to dropped off somewhere different which is completely false."
+      }
+    ]
+  }
+}

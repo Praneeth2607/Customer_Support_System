@@ -49,4 +49,46 @@ This document tracks non-obvious technical, architectural, and data engineering 
   - *Single-pass regex on `@Uber_Support`*: Rejected because subsequent multi-turn replies frequently omit `@Uber_Support`, truncating conversations.
   - *Extracting only 1-turn Q&A pairs*: Rejected because multi-turn follow-ups are needed to understand whether an issue was actually resolved or escalated historically.
 
+### Decision 5: Conversation Unit Representation & Dual-Text Normalization
+* **Context**: Customer tweets contain raw Twitter noise: leading handle mentions (`@Uber_Support @105836`), HTML entities (`&amp;`), and volatile shortlinks (`https://t.co/...`). Feeding raw Twitter handles into TF-IDF models or embedding transformers pollutes vector representations with high-frequency arbitrary ID numbers.
+* **Decision**: Designed a structured conversation JSON schema that stores both:
+  1. `text`: The raw, immutable tweet string (ensuring auditability and exact reference).
+  2. `text_clean`: Normalized text with unescaped HTML, stripped leading `@mentions`, and standardized `[URL]` tokens.
+  Conversations are structured as chronological sequences from the initial customer inquiry through all intermediate agent replies and follow-ups, capped at 6 turns.
+* **Why**: Allows classifiers and retrieval models to focus purely on customer intent semantics (e.g. *"Driver charged me twice for toll"*) while preserving original tweets for full auditing.
+* **Alternatives Considered**: 
+  - *In-place destructive text cleaning*: Rejected because losing original tweet IDs or URLs prevents verifying ground-truth link citations.
+  - *Treating every tweet independently*: Rejected because single tweets lack conversational context (e.g., customer saying *"Yes, that was the one"* makes no sense without the preceding Uber question).
+
+### Decision 6: Pruning Low-Signal / Pure-Mention Inquiries
+* **Context**: During conversation reconstruction, we identified 145 threads where the customer's initial tweet consisted purely of `@Uber_Support` or `@115877 @Uber_Support` with zero descriptive text (e.g., tagging the brand in a photo or trying to get attention).
+* **Decision**: Formulated an explicit data quality filter discarding conversations where `first_customer_query_clean` is empty.
+* **Why**: Tweets with zero semantic content cannot be classified into any intent taxonomy and would degrade evaluation benchmark reliability and classifier training.
+* **Alternatives Considered**: 
+  - *Creating a "Greeting/Empty" intent*: Rejected because customer support agents cannot take action or auto-handle a message containing only a brand tag with no issue stated.
+
+### Decision 7: Formulating a Compact 6-Intent Taxonomy Over Fine-Grained Classes
+* **Context**: Customer support datasets can be split into dozens of hyper-specific micro-intents (e.g., *"lost iPhone"*, *"lost keys"*, *"cleaning fee"*, *"toll fee"*, *"vomit fraud"*). However, overly granular taxonomies suffer from high inter-annotator disagreement, blurred decision boundaries, and poor classifier generalization.
+* **Decision**: Synthesized 6 mutually exclusive, operationally actionable intents grounded in empirical TF-IDF/K-Means clustering:
+  1. `cancellation_issue`
+  2. `fare_and_payment_dispute`
+  3. `lost_item`
+  4. `driver_conduct_and_safety`
+  5. `pickup_and_route_issue`
+  6. `account_and_promo_issue`
+* **Why**: Every intent in this taxonomy maps directly to distinct business actions and escalation rules, maintaining high classification reliability and clear evaluation rubrics.
+* **Alternatives Considered**: 
+  - *Merging down to 3 coarse classes (Billing, Ride, Account)*: Rejected because it groups safe auto-handled queries (lost items) with mandatory safety escalations (reckless driving).
+  - *15+ granular classes*: Rejected due to high label ambiguity and severe data sparsity on minority classes.
+
+### Decision 8: Deterministic Multi-Intent Precedence Hierarchy
+* **Context**: Customer messages often contain overlapping complaints (e.g., *"Driver was rude, cancelled the ride, and charged me $5"*).
+* **Decision**: Established a single-label classification framework enforced by a strict priority hierarchy:
+  `Safety / Threat` > `Lost Item` > `Cancellation Issue` > `Fare Dispute` > `Route/Pickup` > `Account/Promo`.
+* **Why**: Prioritizes passenger safety and urgent personal property recovery above transactional disputes. Avoids the computational complexity of multi-label classification while guaranteeing safety-first arbitration.
+* **Alternatives Considered**: 
+  - *Multi-label classification*: Considered, but the assignment explicitly specifies classifying into a small set of intents. Introducing multi-label evaluation would complicate metric interpretation without improving escalation safety.
+
+
+
 
