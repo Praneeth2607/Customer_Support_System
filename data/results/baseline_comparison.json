@@ -1,0 +1,14 @@
+{
+  "test_set": "data/golden/golden_evaluation_set.json",
+  "test_set_size": 200,
+  "training_pool_size": 41985,
+  "training_labels_source": "Heuristic pseudo-intent classifier (src/evaluation/sample_golden_set.py), NOT gold labels -- see module docstring for the known ~74% agreement ceiling.",
+  "baseline_majority_class": {
+    "accuracy": 0.29,
+    "macro_f1": 0.0642
+  },
+  "baseline_tfidf_logreg": {
+    "accuracy": 0.71,
+    "macro_f1": 0.7238
+  }
+}

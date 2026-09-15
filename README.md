@@ -26,12 +26,27 @@ Built for the **Hiver SDE Intern Take-Home Assignment**.
 | **Step 3** | **Conversation Thread Reconstruction** | 🟢 **Completed** | `src/data/reconstruct_conversations.py`, `data/processed/uber_conversations.json`, `tests/test_reconstruction.py` |
 | **Step 4** | **Intent Discovery & Taxonomy Definition** | 🟢 **Completed** | `src/classification/discover_intents.py`, `docs/intent_taxonomy.md`, `tests/test_taxonomy.py` |
 | **Step 5** | Golden Evaluation Set (150–250 cases) | 🟢 **Completed** (frozen) | `data/golden/golden_evaluation_set.json`, `src/evaluation/`, `docs/golden_set_methodology.md` |
-| **Step 6** | Baseline Models (Majority + TF-IDF + LogReg) | ⚪ Pending | `src/classification/baselines.py` |
+| **Step 6** | Baseline Models (Majority + TF-IDF + LogReg) | 🟢 **Completed** | `src/classification/baselines.py`, `data/results/` |
 | **Step 7** | Retrieval & AI Support Agent Pipeline | ⚪ Pending | `src/pipeline/support_agent.py` |
 | **Step 8** | Automated Evaluation Harness | ⚪ Pending | `evaluation/eval_harness.py` |
 | **Step 9** | LLM-as-a-Judge Calibration with Human Agreement | ⚪ Pending | `evaluation/llm_judge.py` |
 | **Step 10** | Failure Mode Analysis (Top 5 Failures & Hypotheses) | ⚪ Pending | `reports/failure_analysis.md` |
 | **Step 11** | Report, Decision Log & Final Reproducibility Run | ⚪ Pending | `reports/final_report.md`, `docs/DECISION_LOG.md` |
+
+---
+
+## 📈 Step 6 Findings: Baseline Intent Classifiers
+
+Both baselines evaluated on the exact same frozen `data/golden/golden_evaluation_set.json` (200 examples), trained on the Step 5 heuristic pseudo-labels applied to ~42k conversations (golden set `conversation_id`s **and** duplicate-text matches excluded — see Decision 12 for a leakage bug this caught and fixed):
+
+| Baseline | Accuracy | Macro F1 |
+|---|---|---|
+| Majority class (always `out_of_scope_or_unclear`) | 29.0% | 0.0642 |
+| TF-IDF + Logistic Regression | 71.0% | 0.7238 |
+
+* TF-IDF+LogReg's weakest class is `out_of_scope_or_unclear` itself (F1 0.5631) — consistent with that intent carrying the heuristic training labels' own worst noise (74% heuristic/gold agreement measured in Step 5).
+* **Important caveat**: both baselines are trained on *heuristic* weak labels, not gold labels (no larger hand-labelled corpus exists) — their accuracy partly reflects how well 42k weak labels approximate reality, not just classifier quality. Full discussion in `docs/DECISION_LOG.md` (Decision 12).
+* Full per-intent precision/recall/F1 and confusion matrices in `data/results/baseline_majority.json` and `data/results/baseline_tfidf_logreg.json`.
 
 ---
 
@@ -162,6 +177,10 @@ python -m pytest tests/test_taxonomy.py
 python src/evaluation/sample_golden_set.py
 python -m src.evaluation.apply_hand_labels
 python -m pytest tests/test_golden_sampling.py tests/test_golden_labels.py
+
+# Step 6: Run baselines (majority-class + TF-IDF/LogReg) and validate
+python -m src.classification.baselines
+python -m pytest tests/test_baselines.py
 ```
 
 ---
