@@ -1,2 +1,5 @@
 twcs.csv
 .pytest_cache
+.env
+__pycache__/
+*.pyc

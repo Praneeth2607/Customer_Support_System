@@ -27,11 +27,29 @@ Built for the **Hiver SDE Intern Take-Home Assignment**.
 | **Step 4** | **Intent Discovery & Taxonomy Definition** | 🟢 **Completed** | `src/classification/discover_intents.py`, `docs/intent_taxonomy.md`, `tests/test_taxonomy.py` |
 | **Step 5** | Golden Evaluation Set (150–250 cases) | 🟢 **Completed** (frozen) | `data/golden/golden_evaluation_set.json`, `src/evaluation/`, `docs/golden_set_methodology.md` |
 | **Step 6** | Baseline Models (Majority + TF-IDF + LogReg) | 🟢 **Completed** | `src/classification/baselines.py`, `data/results/` |
-| **Step 7** | Retrieval & AI Support Agent Pipeline | ⚪ Pending | `src/pipeline/support_agent.py` |
+| **Step 7** | Retrieval & AI Support Agent Pipeline | 🟢 **Completed** | `src/pipeline/support_agent.py`, `src/evaluation/evaluate_agent.py`, `data/results/` |
 | **Step 8** | Automated Evaluation Harness | ⚪ Pending | `evaluation/eval_harness.py` |
 | **Step 9** | LLM-as-a-Judge Calibration with Human Agreement | ⚪ Pending | `evaluation/llm_judge.py` |
 | **Step 10** | Failure Mode Analysis (Top 5 Failures & Hypotheses) | ⚪ Pending | `reports/failure_analysis.md` |
 | **Step 11** | Report, Decision Log & Final Reproducibility Run | ⚪ Pending | `reports/final_report.md`, `docs/DECISION_LOG.md` |
+
+---
+
+## 🤖 Step 7 Findings: AI Support Agent
+
+Pipeline: **TF-IDF retrieval** over the leakage-safe ~42k-conversation corpus (top-3 similar historical `(customer message, real Uber reply)` pairs) → **one Gemini call** (`gemini-flash-lite-latest`) that classifies intent, decides AUTO-HANDLE/ESCALATE with a reason, and drafts a grounded reply — evaluated on the exact same frozen `golden_evaluation_set.json` as the baselines:
+
+| System | Accuracy | Macro F1 |
+|---|---|---|
+| Majority class | 29.0% | 0.0642 |
+| TF-IDF + Logistic Regression | 71.0% | 0.7238 |
+| **AI Agent (Gemini)** | **87.0%** | **0.8628** |
+
+* **Escalation decision (after a diagnosed prompt fix — see Decision 14)**: **85.0% accuracy** (up from an initial 76.0%), F1 0.877 on `escalate=True`. The first version's system prompt gave escalation criteria as prose, which caused two distinct failure modes: over-escalating routine disputes (treating "needs an account lookup" as grounds to escalate, when giving the standard self-serve redirect *is* the correct auto-handle outcome) and under-escalating cases with real triggers (repeated-pattern language, unauthorized-charge claims, explicit human requests) that were implied but not made explicit. Replacing the prose with an explicit lettered checklist of valid escalation triggers cut false positives 22→7 (-68%) and false negatives 26→23 (-12%) — both directions improved together, not a threshold trade-off. Full diagnosis, fix, and honest before/after in `docs/DECISION_LOG.md` (Decision 14); the pre-fix run is preserved as `data/results/ai_agent_results_v1_baseline.json` for the record.
+* `driver_conduct_and_safety` escalated 21/21 (100%) via the model's own reasoning — the code-level mandatory-escalate override never had to fire.
+* **Provider note**: built on Google Gemini (free tier), not the Anthropic API, per the project owner's explicit cost decision. Hit two real, live-discovered constraints — a deprecated model (404) and a 20-request/day cap on the first model tried — both documented with the actual fix in `docs/DECISION_LOG.md` (Decision 13), including a retry-handler bug a live run caught before it could silently corrupt results.
+* Leakage: the retrieval corpus uses the same conversation-id + duplicate-text exclusion as Step 6 (`src/classification/leakage_utils.py`), re-verified with its own regression test.
+* Full per-intent metrics, confusion matrix, and the three-way comparison in `data/results/ai_agent_metrics.json` and `data/results/system_comparison.json`.
 
 ---
 
@@ -181,6 +199,15 @@ python -m pytest tests/test_golden_sampling.py tests/test_golden_labels.py
 # Step 6: Run baselines (majority-class + TF-IDF/LogReg) and validate
 python -m src.classification.baselines
 python -m pytest tests/test_baselines.py
+
+# Step 7: Run the AI agent (needs GOOGLE_API_KEY in .env) and score it
+# NOTE: results are already committed under data/results/ -- this step's
+# LLM generation is a one-time, slow (free-tier-rate-limited), cached pass;
+# re-running only re-generates examples missing from the cache (0 if the
+# committed cache is present, so a fresh checkout re-runs in seconds).
+python -m src.pipeline.support_agent
+python -m src.evaluation.evaluate_agent
+python -m pytest tests/test_agent_evaluation.py
 ```
 
 ---
@@ -206,4 +233,5 @@ Customer_Support_System/
 
 * **Python**: 3.13.7
 * **Compute**: Local GPU Acceleration
-* **Dependencies**: `pandas`, `numpy`, `pytest`
+* **Dependencies**: `pip install -r requirements.txt` (`pandas`, `numpy`, `scikit-learn`, `pytest`, `google-genai`, `python-dotenv`, `pydantic`)
+* **API key (Step 7 only)**: create a `.env` file in the repo root with `GOOGLE_API_KEY=<your Google AI Studio key>`. Not needed to reproduce Steps 1-6, and not needed for Step 7 either if you're just re-scoring the already-committed `data/results/ai_agent_results.json` — only needed to regenerate agent outputs from scratch. `.env` is gitignored; never commit it.

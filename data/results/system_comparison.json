@@ -1,0 +1,17 @@
+{
+  "test_set": "data/golden/golden_evaluation_set.json",
+  "test_set_size": 200,
+  "majority_class_baseline": {
+    "accuracy": 0.29,
+    "macro_f1": 0.0642
+  },
+  "tfidf_logreg_baseline": {
+    "accuracy": 0.71,
+    "macro_f1": 0.7238
+  },
+  "ai_agent": {
+    "accuracy": 0.87,
+    "macro_f1": 0.8628,
+    "escalation_accuracy": 0.85
+  }
+}

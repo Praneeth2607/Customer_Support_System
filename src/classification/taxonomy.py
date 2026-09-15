@@ -50,6 +50,9 @@ INTENT_DEFINITIONS = {
             "Left my house keys and wallet in a black Camry going to the airport.",
             "My friend forgot her purse in the car and her phone was inside it so she can't log in.",
             "Driver isn't picking up the phone to return my laptop."
+        ],
+        "boundary_notes": [
+            "If the driver is accused of refusing to return the item unless paid (extortion), reclassify as driver_conduct_and_safety and escalate under safety instead.",
         ]
     },
     "driver_conduct_and_safety": {
@@ -61,6 +64,9 @@ INTENT_DEFINITIONS = {
             "The driver started yelling profanities at me when I asked him to turn down the heat.",
             "Driver seemed intoxicated and was swerving between lanes.",
             "Driver refused to let me exit the vehicle at my stop."
+        ],
+        "boundary_notes": [
+            "A driver forcing a passenger OUT of the vehicle -- at the destination or at an unintended/wrong location -- is driver_conduct_and_safety, even if the message is mostly framed around a resulting fare/refund dispute.",
         ]
     },
     "pickup_and_route_issue": {

@@ -50,51 +50,23 @@ from sklearn.metrics import (
 )
 
 from src.classification.taxonomy import INTENTS, ESCALATION_POLICIES
-from src.evaluation.sample_golden_set import (
-    pseudo_label as heuristic_pseudo_label,
-    near_duplicate_signature,
-)
+from src.classification.leakage_utils import iter_leakage_safe_conversations
+from src.evaluation.sample_golden_set import pseudo_label as heuristic_pseudo_label
 
-CONVERSATIONS_PATH = "data/processed/uber_conversations.json"
 GOLDEN_SET_PATH = "data/golden/golden_evaluation_set.json"
-LEAKAGE_MANIFEST_PATH = "data/golden/golden_conversation_ids.json"
 RESULTS_DIR = "data/results"
 RANDOM_SEED = 42
 
 
 def build_training_set():
-    """Heuristic-pseudo-labelled training pool, excluding golden set conversation_ids
-    AND any exact/near-duplicate text of a golden set message under a different
-    conversation_id (see Decision 12 -- the leakage manifest only tracks
-    conversation_id, which missed a duplicate tweet with a different ID)."""
-    with open(CONVERSATIONS_PATH, "r", encoding="utf-8") as f:
-        conversations = json.load(f)
-    with open(LEAKAGE_MANIFEST_PATH, "r", encoding="utf-8") as f:
-        reserved_ids = set(json.load(f)["conversation_ids"])
-    with open(GOLDEN_SET_PATH, "r", encoding="utf-8") as f:
-        golden_set = json.load(f)
-
-    golden_texts = {c["customer_message"].strip() for c in golden_set}
-    golden_signatures = {near_duplicate_signature(c["customer_message"]) for c in golden_set}
-
+    """Heuristic-pseudo-labelled training pool, leakage-safe (see
+    src/classification/leakage_utils.py -- excludes by conversation_id AND
+    exact/near-duplicate text, per Decision 12)."""
     texts, labels = [], []
-    text_leaks_blocked = 0
-    for conv in conversations:
-        if conv["conversation_id"] in reserved_ids:
-            continue  # leakage control: never train on golden set conversations
-        text = conv["first_customer_query_clean"].strip()
-        if len(text) <= 5:
-            continue
-        if text in golden_texts or near_duplicate_signature(text) in golden_signatures:
-            text_leaks_blocked += 1
-            continue  # leakage control: duplicate/near-duplicate of a golden message
+    for conv in iter_leakage_safe_conversations():
         pseudo_intent, _difficulty, _matched, _subtype, _wc = heuristic_pseudo_label(conv)
-        texts.append(text)
+        texts.append(conv["first_customer_query_clean"].strip())
         labels.append(pseudo_intent)
-
-    if text_leaks_blocked:
-        print(f"Blocked {text_leaks_blocked} training example(s) that duplicated/"
-              f"near-duplicated a golden set message under a different conversation_id.")
 
     return texts, labels
 
