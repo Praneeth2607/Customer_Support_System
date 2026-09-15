@@ -1,13 +1,30 @@
 """
 Step 4: Intent Discovery & Unsupervised Clustering
 
-Analyzes all 42,368 customer queries from data/processed/uber_conversations.json:
+Analyzes customer queries from data/processed/uber_conversations.json:
 1. Performs TF-IDF vectorization (unigrams and bigrams).
 2. Extracts global top n-grams to identify dominant customer vocabulary.
-3. Fits K-Means clustering (k=6) to discover natural problem groupings.
+3. Fits K-Means clustering (k=10) to discover natural problem groupings.
 4. Extracts top keyword terms and real sample queries per cluster.
-5. Exports discovery findings to data/audit/intent_discovery_report.json to support
-   our empirical intent taxonomy definition.
+5. Exports discovery findings to data/audit/intent_discovery_report.json.
+
+Re-run history:
+  v1 (k=6, 20k random sample): produced clusters dominated by noise (47%) and
+    an unlabeled Uber Eats topic (11.7%), with no cluster distinctly matching
+    driver_conduct_and_safety or pickup_and_route_issue. Those two intents are
+    real but low-frequency relative to fare/cancellation/account chatter, so
+    unsupervised KMeans folds them into the largest generic cluster rather
+    than isolating them -- expected behavior on imbalanced support text, not
+    a bug, but it meant the "empirically derived" framing overstated what the
+    clustering alone could show.
+  v2 (k=10, full 42,186-query pool -- current): clustering on the full pool
+    instead of a 20k subsample, and raising k from 6 to 10, cleanly separates
+    fare/cancellation, lost-item, account/security (disabled/hacked), a
+    pickup-wait cluster ("minutes away", "waiting"), and Uber Eats content
+    from the residual generic/noise mass. This directly motivated adding the
+    `out_of_scope_or_unclear` 7th taxonomy label (see docs/intent_taxonomy.md)
+    to explicitly own the Eats + low-signal traffic instead of forcing it
+    into one of the six ride-support intents.
 """
 
 import os
@@ -21,8 +38,8 @@ from sklearn.cluster import KMeans
 def discover_intents(
     input_json="data/processed/uber_conversations.json",
     output_report="data/audit/intent_discovery_report.json",
-    num_clusters=6,
-    sample_size=20_000,
+    num_clusters=10,
+    sample_size=None,
     random_state=42
 ):
     print("=" * 70)
@@ -38,8 +55,9 @@ def discover_intents(
     queries = [c["first_customer_query_clean"] for c in conversations if len(c["first_customer_query_clean"].strip()) > 5]
     print(f"Extracted {len(queries):,} substantive customer queries.")
     
-    # Sample if necessary for fast clustering
-    if len(queries) > sample_size:
+    # Sample only if a cap is explicitly requested; default is the full pool
+    # (42,186 queries clusters in well under a minute, so no need to subsample).
+    if sample_size is not None and len(queries) > sample_size:
         np.random.seed(random_state)
         sampled_indices = np.random.choice(len(queries), size=sample_size, replace=False)
         analysis_queries = [queries[i] for i in sampled_indices]

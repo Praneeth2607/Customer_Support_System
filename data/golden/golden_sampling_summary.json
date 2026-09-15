@@ -1,0 +1,40 @@
+{
+  "target_size": 200,
+  "actual_size": 200,
+  "random_seed": 42,
+  "sampling_frame_size": 41784,
+  "near_duplicates_dropped": 402,
+  "quotas_planned": {
+    "cancellation_issue": 31,
+    "fare_and_payment_dispute": 37,
+    "lost_item": 23,
+    "driver_conduct_and_safety": 21,
+    "pickup_and_route_issue": 23,
+    "account_and_promo_issue": 28,
+    "out_of_scope_or_unclear": 37
+  },
+  "pseudo_intent_counts_achieved": {
+    "cancellation_issue": 31,
+    "fare_and_payment_dispute": 37,
+    "lost_item": 23,
+    "driver_conduct_and_safety": 21,
+    "pickup_and_route_issue": 23,
+    "account_and_promo_issue": 28,
+    "out_of_scope_or_unclear": 37
+  },
+  "difficulty_counts_achieved": {
+    "easy": 87,
+    "long_conversation": 19,
+    "multi_intent": 34,
+    "short_message": 23,
+    "zero_signal": 37
+  },
+  "turn_distribution_achieved": {
+    "2": 139,
+    "3": 27,
+    "4": 25,
+    "5": 2,
+    "6": 7
+  },
+  "quota_shortfalls": {}
+}

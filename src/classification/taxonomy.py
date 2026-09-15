@@ -14,7 +14,8 @@ INTENTS = [
     "lost_item",
     "driver_conduct_and_safety",
     "pickup_and_route_issue",
-    "account_and_promo_issue"
+    "account_and_promo_issue",
+    "out_of_scope_or_unclear"
 ]
 
 INTENT_DEFINITIONS = {
@@ -83,6 +84,17 @@ INTENT_DEFINITIONS = {
             "Why was my rider account suddenly deactivated?",
             "I paid for a Ride Pass but it is not showing up as active in my app."
         ]
+    },
+    "out_of_scope_or_unclear": {
+        "name": "Out of Scope / Unclear",
+        "definition": "Messages that are not ride-support requests our taxonomy covers, or that lack enough information to assign any of the other five intents. Covers two distinct sub-cases: (a) Uber Eats / food-delivery content, a different Uber business line with its own policies that this ride-support taxonomy does not model, and (b) generic, low-signal messages -- bare venting, a lone '@Uber_Support' mention, or a one-line 'please help me' with no stated problem.",
+        "keywords": ["uber eats", "order food", "delivery", "ubereats", "need help", "worst customer service", "please help"],
+        "examples": [
+            "Y'all do they have Uber Eats in Tallahassee?",
+            "Can I order some cereal @115877",
+            "what do we do? Help!",
+            "what's up with your customer service?"
+        ]
     }
 }
 
@@ -116,6 +128,11 @@ ESCALATION_POLICIES = {
         "action": "conditional_auto_handle",
         "default_escalate": False,
         "policy_rationale": "Provide promo eligibility rules and password/2FA recovery links. Escalate for account deactivations or security breaches."
+    },
+    "out_of_scope_or_unclear": {
+        "action": "mandatory_escalate",
+        "default_escalate": True,
+        "policy_rationale": "No ride-support policy applies (Uber Eats) or there is not enough information to act (bare mention / no stated problem). Route to a human rather than guess at an action; a human can redirect Eats traffic or ask the customer a clarifying question."
     }
 }
 
@@ -126,7 +143,8 @@ INTENT_PRECEDENCE = [
     "cancellation_issue",           # Direct transactional cancellation dispute
     "fare_and_payment_dispute",     # General pricing / billing
     "pickup_and_route_issue",       # Navigation / route
-    "account_and_promo_issue"       # Account settings / promos
+    "account_and_promo_issue",      # Account settings / promos
+    "out_of_scope_or_unclear"       # Lowest priority: only used when nothing else applies
 ]
 
 def resolve_multi_intent(detected_intents: list[str]) -> str:
@@ -134,4 +152,4 @@ def resolve_multi_intent(detected_intents: list[str]) -> str:
     for intent in INTENT_PRECEDENCE:
         if intent in detected_intents:
             return intent
-    return detected_intents[0] if detected_intents else "account_and_promo_issue"
+    return detected_intents[0] if detected_intents else "out_of_scope_or_unclear"

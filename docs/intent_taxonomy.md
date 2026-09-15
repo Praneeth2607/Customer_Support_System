@@ -1,15 +1,16 @@
-# Empirical Intent Taxonomy & Escalation Policy
+# Intent Taxonomy & Escalation Policy
 
-This document defines the official 6-intent taxonomy discovered from the Uber customer support dataset (`data/processed/uber_conversations.json`).
+This document defines the official 7-intent taxonomy used for the Uber customer support dataset (`data/processed/uber_conversations.json`).
 
-The taxonomy was derived through:
-1. TF-IDF unigram and bigram frequency mining across 42k+ customer inquiries.
-2. Unsupervised K-Means clustering (documented in [`data/audit/intent_discovery_report.json`](file:///c:/Users/study/OneDrive/Desktop/Projects/Customer_Support_System/data/audit/intent_discovery_report.json)).
-3. Qualitative evaluation of operational actionability and escalation risk boundaries.
+The taxonomy was built through:
+1. TF-IDF unigram/bigram frequency mining and unsupervised K-Means clustering (k=10) across all 42,186 substantive customer inquiries — documented in [`data/audit/intent_discovery_report.json`](file:///c:/Users/study/OneDrive/Desktop/Projects/Customer_Support_System/data/audit/intent_discovery_report.json).
+2. Qualitative, domain-informed labelling of what the clusters actually contain, followed by manual definition of operationally actionable intent boundaries and escalation policy.
+
+**Honesty note on provenance**: clustering *informed* this taxonomy, it did not mechanically *produce* it. K-Means on TF-IDF naturally clusters around the highest-frequency vocabulary — fare/cancellation/account terms dominate because they're common, while `driver_conduct_and_safety` and `pickup_and_route_issue` are real, high-stakes categories in the data but too low-frequency to form their own distinct cluster; both are visible only as small sub-populations inside larger, generic clusters. That's expected behavior on imbalanced real-world support text, not a failure of the method. The two remaining intents were added because they *are* directly visible as distinct clusters and needed an explicit label: **Uber Eats / food-delivery content** (a different Uber business line, ~10.7% of the pool: cluster 7 at 8.73% + cluster 3 at 1.94% in the k=10 run) and **generic, low-signal messages** with no stated problem (~9.4%: cluster 4 + cluster 5). Forcing that ~20% of traffic into one of six ride-support intents would have been worse than adding a seventh, explicit `out_of_scope_or_unclear` label.
 
 ---
 
-## 🎯 The 6 Core Intents
+## 🎯 The 7 Intents
 
 ```text
                                   Customer Inquiry
@@ -25,6 +26,9 @@ The taxonomy was derived through:
  4. driver_conduct_and_safety 5. pickup_and_route_issue   6. account_and_promo_issue
  (Reckless driving, abuse,    (Wrong pickup location,     (Login lock, promo codes,
   safety violations)           detours, inefficient route) ride pass, app bugs)
+        │
+        └── 7. out_of_scope_or_unclear
+            (Uber Eats / food delivery, or no stated problem)
 ```
 
 ---
@@ -132,6 +136,26 @@ The taxonomy was derived through:
 
 ---
 
+### 7. `out_of_scope_or_unclear`
+
+* **Definition**: Messages that are not ride-support requests this taxonomy covers, or that lack enough information to assign any of the other six intents. Two distinct sub-cases live under one label because both resolve the same way operationally — neither can be safely auto-handled by a ride-support policy:
+  1. **Uber Eats / food-delivery content** — a different Uber business line (food ordering, delivery status, restaurant issues) with its own policies this taxonomy does not model.
+  2. **Generic, low-signal messages** — a bare `@Uber_Support` mention, a one-line "please help me" with no stated problem, or pure venting ("worst customer service ever") with no actionable detail.
+* **Empirical Indicators**: `uber eats`, `order food`, `delivery`, `ubereats`, `need help`, `worst customer service`, `please help`.
+* **Positive Examples**:
+  1. *"Y'all do they have Uber Eats in Tallahassee?"*
+  2. *"Can I order some cereal @115877"*
+  3. *"what do we do? Help!"*
+  4. *"what's up with your customer service?"*
+* **Boundary Cases**:
+  * *Vs. any ride intent*: If the message names a concrete ride problem (a fare, a driver, a cancellation, a lost item) anywhere in the text, it belongs to that intent even if also vague — this label is for messages with **no** extractable ride-support signal.
+  * *Uber Eats mentioning a ride-like word*: A food-order complaint that happens to say "driver" (the delivery courier) still belongs here, not `driver_conduct_and_safety` — read for ride vs. delivery context.
+* **Escalation Policy**:
+  * **MANDATORY ESCALATION**: No ride-support policy applies, or there isn't enough information to act. A human should either redirect Eats traffic to the right support channel or ask the customer a clarifying question — never guess.
+* **Discovery Evidence**: Directly visible as distinct K-Means clusters on the full 42,186-query pool (k=10): Eats-related content is cluster 7 (8.73%) + cluster 3 (1.94%) ≈ 10.7%; generic/low-signal content is cluster 4 (6.6%) + cluster 5 (2.83%) ≈ 9.4%. See [`data/audit/intent_discovery_report.json`](file:///c:/Users/study/OneDrive/Desktop/Projects/Customer_Support_System/data/audit/intent_discovery_report.json).
+
+---
+
 ## ⚖️ Intent Precedence & Multi-Intent Disambiguation Hierarchy
 
 When a customer message expresses multiple problems in one tweet (*e.g., "Driver cancelled, refused to pick me up, was rude, and charged me $5"*), the system resolves the conflict using this strict priority hierarchy:
@@ -147,7 +171,9 @@ Fare Overcharges (fare_and_payment_dispute) [Rank 4]
                      ↓
 Route / Pickup (pickup_and_route_issue)     [Rank 5]
                      ↓
-Account & Promos (account_and_promo_issue)  [Rank 6 - Lowest Priority]
+Account & Promos (account_and_promo_issue)  [Rank 6]
+                     ↓
+Out of Scope / Unclear (out_of_scope_or_unclear) [Rank 7 - Fallback Only]
 ```
 
 **Guiding Rule**: Safety and time-critical assets always take absolute precedence over financial and account complaints.

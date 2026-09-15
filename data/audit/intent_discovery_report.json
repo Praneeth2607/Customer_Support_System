@@ -1,38 +1,38 @@
 {
-  "total_analyzed_queries": 20000,
-  "num_clusters": 6,
+  "total_analyzed_queries": 42186,
+  "num_clusters": 10,
   "top_global_ngrams": [
     {
       "term": "uber",
-      "score": 0.03
+      "score": 0.0303
     },
     {
       "term": "driver",
-      "score": 0.0295
+      "score": 0.0293
     },
     {
       "term": "url",
-      "score": 0.0255
+      "score": 0.0254
     },
     {
       "term": "115873",
-      "score": 0.0239
+      "score": 0.024
     },
     {
       "term": "help",
-      "score": 0.0198
+      "score": 0.02
     },
     {
       "term": "ride",
-      "score": 0.0184
-    },
-    {
-      "term": "app",
-      "score": 0.0166
+      "score": 0.0182
     },
     {
       "term": "account",
       "score": 0.0164
+    },
+    {
+      "term": "app",
+      "score": 0.0163
     },
     {
       "term": "charged",
@@ -40,35 +40,35 @@
     },
     {
       "term": "drivers",
-      "score": 0.0149
+      "score": 0.0147
     },
     {
       "term": "uber_support",
-      "score": 0.0142
+      "score": 0.0145
     },
     {
       "term": "just",
-      "score": 0.0138
+      "score": 0.014
     },
     {
       "term": "order",
-      "score": 0.0136
+      "score": 0.0139
     },
     {
       "term": "115877",
-      "score": 0.0126
-    },
-    {
-      "term": "phone",
-      "score": 0.0123
-    },
-    {
-      "term": "trip",
-      "score": 0.0123
+      "score": 0.0127
     },
     {
       "term": "need",
-      "score": 0.0118
+      "score": 0.0121
+    },
+    {
+      "term": "trip",
+      "score": 0.0121
+    },
+    {
+      "term": "phone",
+      "score": 0.012
     },
     {
       "term": "service",
@@ -80,7 +80,7 @@
     },
     {
       "term": "time",
-      "score": 0.0108
+      "score": 0.0107
     },
     {
       "term": "car",
@@ -95,169 +95,273 @@
       "score": 0.0091
     },
     {
-      "term": "number",
-      "score": 0.0089
-    },
-    {
       "term": "cancel",
       "score": 0.0088
+    },
+    {
+      "term": "don",
+      "score": 0.0087
     }
   ],
   "clusters": [
     {
-      "cluster_id": 1,
-      "size": 9418,
-      "percentage": 47.09,
+      "cluster_id": 10,
+      "size": 17572,
+      "percentage": 41.65,
       "top_keywords": [
-        "url",
         "uber",
-        "drivers",
-        "115873",
-        "account",
-        "app",
-        "uber_support",
-        "service",
-        "customer",
-        "just",
+        "driver",
+        "ride",
         "charged",
-        "time"
+        "account",
+        "drivers",
+        "trip",
+        "just",
+        "uber_support",
+        "got",
+        "need",
+        "dm"
       ],
       "representative_queries": [
-        "introduce this in Maryland \ud83d\ude2d",
-        "Whennnnn",
-        "you morons",
-        "kjlkj l hlk lhl kj",
-        "please hook it up with a beacon everyone around here have one exept me was up with that"
+        "waaaaaattt???",
+        "9322230301",
+        "helppppp",
+        "anyone on",
+        "buenos d\u00edas"
       ]
     },
     {
-      "cluster_id": 3,
-      "size": 3864,
-      "percentage": 19.32,
+      "cluster_id": 9,
+      "size": 5095,
+      "percentage": 12.08,
       "top_keywords": [
+        "115873",
+        "driver",
+        "115873 driver",
+        "drivers",
+        "uber_support",
+        "ride",
+        "hey 115873",
+        "hey",
+        "just",
+        "uber",
+        "115873 uber_support",
+        "115873 drivers"
+      ],
+      "representative_queries": [
+        "Gosh this @115873 I\u2019m in the driver is clueless!",
+        "This @115873 driver is horrifying me.",
+        "When your @115873 driver holds your lost backpack ransom \ud83d\ude43",
+        "The @115873 driver is scaring the \ud83d\udca9 out of me with his driving. [URL]",
+        "My @115873 driver has BO. Serious problem!"
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "size": 4232,
+      "percentage": 10.03,
+      "top_keywords": [
+        "url",
         "driver",
         "115873",
+        "uber_support",
         "uber",
         "trip",
+        "uber_support url",
+        "ride",
         "charged",
-        "115873 driver",
-        "uber driver",
-        "url",
-        "cancelled",
-        "cancel",
-        "car",
+        "115873 url",
+        "drivers",
         "just"
       ],
       "representative_queries": [
-        "to another driver. 2/2",
-        "Why is my Uber driver vaping @115873",
-        "driver no 9769729713 how could driver abuse customer",
-        "This @115873 driver is horrifying me.",
-        "What to do when an Uber driver hesitate to come for a trip and Ola driver cancell the trip?"
+        "Again [URL]",
+        "Y u lyin? [URL]",
+        "\ud83d\ude4a\ud83d\ude4a\ud83d\ude4a [URL]",
+        "what is this? [URL]",
+        "#Deleteubereats [URL]"
       ]
     },
     {
-      "cluster_id": 2,
-      "size": 2346,
-      "percentage": 11.73,
+      "cluster_id": 7,
+      "size": 3681,
+      "percentage": 8.73,
       "top_keywords": [
-        "order",
         "115877",
+        "order",
         "food",
-        "eats",
-        "uber eats",
-        "url",
-        "uber",
-        "ordered",
+        "delivered",
         "delivery",
-        "deliver",
+        "ordered",
+        "ubereats",
+        "url",
         "just",
-        "ubereats"
+        "hour",
+        "wrong",
+        "time"
       ],
       "representative_queries": [
         "Can I order some cereal @115877",
-        "Can I order Wendy's?",
-        "How is @30973 not on @115877 ??????????",
-        ".@115877 WHUT? [URL]",
-        "And, jk. No @115877 for my part of Louisville [URL]"
+        "Can y'all pleaaaaase get more food spots in Cincinnati? @115877",
+        "Nem perco meu tempo divulgando essa merda, @115877 lixo",
+        "Can we get @115877 in Stockton already? \ud83d\ude29",
+        "#justicefornugs #justicefornugs #justicefornugs @115877"
       ]
     },
     {
-      "cluster_id": 5,
-      "size": 1921,
-      "percentage": 9.61,
+      "cluster_id": 8,
+      "size": 3181,
+      "percentage": 7.54,
       "top_keywords": [
-        "ride",
-        "charged",
-        "ride pass",
-        "pass",
-        "115873",
-        "driver",
+        "app",
         "uber",
+        "uber app",
+        "help",
         "url",
-        "got",
-        "uber_support",
-        "cancel",
-        "uber ride"
+        "driver",
+        "ride",
+        "use",
+        "support",
+        "working",
+        "115873",
+        "says"
       ],
       "representative_queries": [
-        "What do i put in for @242326 or @Uber_Support to get a ride to #waghaborder?",
-        "Can I get another ride pass please????? @115873",
-        "- how about a recurring subscription for a Ride Pass, please? \ud83d\udc4f\ud83c\udffc",
-        "I don\u2019t have ride pass ..... @115873 why do I not have ride pass???",
-        "Don\u2019t ride with Pamela tag no NMR167 @uber_support she will abandon you at the BP"
+        "what's up with the app? Harrisonburg VA",
+        "why is the app is down \ud83d\ude44\ud83d\ude24\ud83d\ude2d",
+        "your app is down :(",
+        "Rape app",
+        "where\u2019s the orange banner on your app?"
       ]
     },
     {
-      "cluster_id": 6,
-      "size": 1526,
-      "percentage": 7.63,
+      "cluster_id": 4,
+      "size": 2784,
+      "percentage": 6.6,
       "top_keywords": [
         "help",
         "need",
         "need help",
         "account",
         "uber",
-        "app",
-        "url",
-        "hi",
         "help url",
-        "support",
-        "uber_support",
-        "issue"
+        "url",
+        "ride",
+        "email",
+        "hi",
+        "driver",
+        "support"
       ],
       "representative_queries": [
-        "help please",
-        "please can I get help",
-        "can you help on this?",
+        "what do we do? Help!",
+        "No help ?",
         "please help me",
-        "May I get some help?"
+        "help please",
+        "please help!!!"
       ]
     },
     {
-      "cluster_id": 4,
-      "size": 925,
-      "percentage": 4.62,
+      "cluster_id": 6,
+      "size": 1979,
+      "percentage": 4.69,
+      "top_keywords": [
+        "minutes",
+        "mins",
+        "away",
+        "10",
+        "driver",
+        "20",
+        "min",
+        "cancel",
+        "waiting",
+        "15",
+        "115873",
+        "10 minutes"
+      ],
+      "representative_queries": [
+        "My @115873 has been \u201cTWO\u201d minutes away for the past TEN minutes.",
+        "one of your drivers has been 6 minutes away for 10 minutes now",
+        "be 5 minutes away for 30 minutes \ud83e\udd14",
+        "After already waiting 20 minutes, my uber driver has gone from being 14 minutes away to 15 minutes away @Uber_Support. Not only that but if I cancel I'll incur a fee even though he's dropping someone off before picking me up? What a joke. [URL]",
+        "was charged $10 when the driver went from 10 minutes away. then 10 minutes passes and it was still 8 minutes away."
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "size": 1651,
+      "percentage": 3.91,
       "top_keywords": [
         "phone",
         "number",
         "phone number",
         "left",
         "left phone",
-        "uber",
         "phone uber",
+        "uber",
         "help",
         "lost",
         "lost phone",
         "contact",
-        "driver"
+        "account"
       ],
       "representative_queries": [
+        "why can\u2019t I find a phone number anywhere ... I left my phone in an Uber and can\u2019t login to your [URL]",
         "left my phone in a car and it's asking for my phone number to find it..",
-        "why do not you have a phone number to call?",
-        "Catherine Kaplan phone number is 312 782 7828",
-        "buddy left his phone in an Uber and can't contact the dude because it won't show him a phone number",
-        "One of your drivers with the phone number (702) 381-6351 pick pocketed my phone. I traced my phone and it was clearly in a car."
+        "I left my phone in a car and I don\u2019t have another number. How do I get my phone back",
+        "Hello. I left my phone is an uber honda car. It does not show up on my resent travles so how do I get my phone back.",
+        "buddy left his phone in an Uber and can't contact the dude because it won't show him a phone number"
+      ]
+    },
+    {
+      "cluster_id": 5,
+      "size": 1193,
+      "percentage": 2.83,
+      "top_keywords": [
+        "service",
+        "customer",
+        "customer service",
+        "worst",
+        "worst customer",
+        "number",
+        "115873",
+        "terrible",
+        "service number",
+        "uber",
+        "support",
+        "contact"
+      ],
+      "representative_queries": [
+        "what\u2019s up with your customer service?",
+        "can someone help me with customer service ?",
+        "why no customer service contact?",
+        "phenomenal customer service. Really.",
+        "why the fuck can't I call customer service"
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "size": 818,
+      "percentage": 1.94,
+      "top_keywords": [
+        "uber eats",
+        "eats",
+        "uber",
+        "order",
+        "food",
+        "ordered",
+        "eats driver",
+        "does",
+        "eats order",
+        "does uber",
+        "help",
+        "eats deliver"
+      ],
+      "representative_queries": [
+        "Y\u2019all do they have Uber eats in Tallahassee?",
+        "Is there Uber Eats but for Takis?",
+        "can you uber eats candy corn :( ?",
+        "Is uber eats in Albany yet ?",
+        "Can uber eats get me a fruit platter????"
       ]
     }
   ]

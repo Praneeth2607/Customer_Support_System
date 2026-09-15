@@ -22,6 +22,10 @@ def test_intent_discovery_report_exists():
     assert "clusters" in data, "Report must have clusters"
     assert len(data["clusters"]) >= 5, "Should have at least 5 clusters"
     assert "top_global_ngrams" in data, "Report must have top_global_ngrams"
+    # v2 discovery run clusters the full query pool (42,186), not a 20k subsample.
+    assert data["total_analyzed_queries"] == 42186, (
+        "Discovery report should reflect the full query pool, not a subsample"
+    )
 
 def test_intent_taxonomy_document_exists():
     assert os.path.exists(TAXONOMY_DOC), f"{TAXONOMY_DOC} must exist"
@@ -34,7 +38,8 @@ def test_intent_taxonomy_document_exists():
         "lost_item",
         "driver_conduct_and_safety",
         "pickup_and_route_issue",
-        "account_and_promo_issue"
+        "account_and_promo_issue",
+        "out_of_scope_or_unclear"
     ]
     for intent in expected_intents:
         assert intent in content, f"Intent '{intent}' must be documented in {TAXONOMY_DOC}"
@@ -46,7 +51,7 @@ def test_intent_taxonomy_document_exists():
 def test_taxonomy_python_module():
     from src.classification.taxonomy import INTENTS, INTENT_DEFINITIONS, ESCALATION_POLICIES
     
-    assert len(INTENTS) == 6, f"Expected exactly 6 intents, got {len(INTENTS)}"
+    assert len(INTENTS) == 7, f"Expected exactly 7 intents, got {len(INTENTS)}"
     for intent in INTENTS:
         assert intent in INTENT_DEFINITIONS, f"Intent definition missing for {intent}"
         assert intent in ESCALATION_POLICIES, f"Escalation policy missing for {intent}"

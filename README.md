@@ -25,7 +25,7 @@ Built for the **Hiver SDE Intern Take-Home Assignment**.
 | **Step 2** | **Uber Support Brand Extraction & Audit** | 🟢 **Completed** | `src/data/extract_uber.py`, `data/processed/uber_tweets.csv`, `tests/test_extraction.py` |
 | **Step 3** | **Conversation Thread Reconstruction** | 🟢 **Completed** | `src/data/reconstruct_conversations.py`, `data/processed/uber_conversations.json`, `tests/test_reconstruction.py` |
 | **Step 4** | **Intent Discovery & Taxonomy Definition** | 🟢 **Completed** | `src/classification/discover_intents.py`, `docs/intent_taxonomy.md`, `tests/test_taxonomy.py` |
-| **Step 5** | Golden Evaluation Set (150–250 cases) | ⚪ *Next Step* | `data/golden/golden_evaluation_set.json` |
+| **Step 5** | Golden Evaluation Set (150–250 cases) | 🟢 **Completed** (frozen) | `data/golden/golden_evaluation_set.json`, `src/evaluation/`, `docs/golden_set_methodology.md` |
 | **Step 6** | Baseline Models (Majority + TF-IDF + LogReg) | ⚪ Pending | `src/classification/baselines.py` |
 | **Step 7** | Retrieval & AI Support Agent Pipeline | ⚪ Pending | `src/pipeline/support_agent.py` |
 | **Step 8** | Automated Evaluation Harness | ⚪ Pending | `evaluation/eval_harness.py` |
@@ -35,9 +35,21 @@ Built for the **Hiver SDE Intern Take-Home Assignment**.
 
 ---
 
-## 🎯 Step 4 Findings: Empirical Intent Taxonomy Summary
+## 🧪 Step 5 Findings: Golden Evaluation Set (Frozen, Hand-Labelled)
 
-Derived via TF-IDF n-gram extraction and K-Means clustering across 42,186 customer inquiries:
+* **200 examples** stratified-sampled from a 41,784-row frame (42,186 usable customer queries, minus 402 near-duplicates) using a floor(18) + proportional-top-up quota per intent, then **hand-labelled** in full (`gold_intent`, `should_escalate`, `escalation_reason`, `labeling_notes` for every example) and frozen as `data/golden/golden_evaluation_set.json`.
+* **Gold intent distribution**: `out_of_scope_or_unclear` 58, `account_and_promo_issue` 36, `cancellation_issue` 27, `fare_and_payment_dispute` 26, `driver_conduct_and_safety` 21, `lost_item` 16, `pickup_and_route_issue` 16.
+* **Escalation**: 130/200 (65%) `should_escalate=true`. `driver_conduct_and_safety` escalates 21/21 (100%, mandatory policy, no exceptions); `out_of_scope_or_unclear` escalates 55/58. **This rate reflects the deliberately rare-intent-heavy sampling design, not real-world escalation volume** — see methodology doc.
+* **Heuristic vs. hand-label agreement: 148/200 (74.0%)** — the sampling heuristic's 26% error rate was overwhelmingly Eats content that coincidentally matched a ride-intent keyword (e.g. "cancelled my order"), corrected to `out_of_scope_or_unclear` on manual review. This is itself useful evidence that a naive keyword classifier is a weak baseline.
+* One genuine **taxonomy precedence gap** was found and documented rather than silently patched (`golden_0091`: hacked account causing fraudulent charges) — flagged for the Step 10 failure analysis.
+* **Leakage control**: `data/golden/golden_conversation_ids.json` reserves all 200 `conversation_id`s for exclusion from any Step 7 retrieval corpus.
+* Full methodology, quota derivation, and hand-labelling rules documented in [`docs/golden_set_methodology.md`](file:///c:/Users/study/OneDrive/Desktop/Projects/Customer_Support_System/docs/golden_set_methodology.md); every non-obvious labelling decision also logged in `docs/DECISION_LOG.md` (Decisions 10-11).
+
+---
+
+## 🎯 Step 4 Findings: Intent Taxonomy Summary
+
+Informed by TF-IDF n-gram extraction + K-Means clustering (k=10) across the full pool of **42,186** substantive customer inquiries (see [`data/audit/intent_discovery_report.json`](file:///c:/Users/study/OneDrive/Desktop/Projects/Customer_Support_System/data/audit/intent_discovery_report.json)), then finalized by qualitative, domain-informed labelling — see the "Honesty note on provenance" in `docs/intent_taxonomy.md` for exactly what the clustering did and didn't show:
 
 | Intent Name | Core Problem Space | Sample Indicator Keywords | Default Escalation Policy |
 |---|---|---|---|
@@ -47,8 +59,10 @@ Derived via TF-IDF n-gram extraction and K-Means clustering across 42,186 custom
 | **`driver_conduct_and_safety`** | Reckless driving, verbal abuse, harassment | `unsafe`, `reckless`, `rude`, `threatened` | **MANDATORY ESCALATE (100%)** (Route to safety team) |
 | **`pickup_and_route_issue`** | Wrong pickup, detours, car not moving | `wrong route`, `detour`, `refused to go` | Conditional Auto-Handle (route review link) |
 | **`account_and_promo_issue`** | Promo code failure, login/2FA, Ride Pass | `promo code`, `discount`, `login locked` | Conditional Auto-Handle (escalate if deactivated) |
+| **`out_of_scope_or_unclear`** | Uber Eats / food delivery, or no stated problem | `uber eats`, `order food`, `need help` | **MANDATORY ESCALATE** (redirect or clarify) |
 
-* **Multi-Intent Precedence**: `Safety` > `Lost Item` > `Cancellation` > `Fare Dispute` > `Route` > `Account/Promo`.
+* **Multi-Intent Precedence**: `Safety` > `Lost Item` > `Cancellation` > `Fare Dispute` > `Route` > `Account/Promo` > `Out of Scope/Unclear`.
+* **Why a 7th intent**: the k=10 clustering on the full query pool directly surfaces Uber Eats content (~10.7% of traffic) and generic, low-signal messages (~9.4%) as distinct clusters — neither fits a ride-support policy, so forcing them into one of the six ride intents would mislabel ~20% of real inbound traffic. See Decision 9 in `docs/DECISION_LOG.md`.
 * Complete taxonomy documented in [`docs/intent_taxonomy.md`](file:///c:/Users/study/OneDrive/Desktop/Projects/Customer_Support_System/docs/intent_taxonomy.md) and coded in [`src/classification/taxonomy.py`](file:///c:/Users/study/OneDrive/Desktop/Projects/Customer_Support_System/src/classification/taxonomy.py).
 
 
@@ -143,6 +157,11 @@ python -m pytest tests/test_reconstruction.py
 # Step 4: Run intent discovery and validate taxonomy
 python src/classification/discover_intents.py
 python -m pytest tests/test_taxonomy.py
+
+# Step 5: Sample golden set candidates, apply hand-labels, and validate
+python src/evaluation/sample_golden_set.py
+python -m src.evaluation.apply_hand_labels
+python -m pytest tests/test_golden_sampling.py tests/test_golden_labels.py
 ```
 
 ---
