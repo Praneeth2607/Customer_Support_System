@@ -1,0 +1,224 @@
+{
+  "golden_set": {
+    "path": "data/golden/golden_evaluation_set.json",
+    "size": 200,
+    "intent_distribution": {
+      "cancellation_issue": 27,
+      "driver_conduct_and_safety": 21,
+      "out_of_scope_or_unclear": 58,
+      "lost_item": 16,
+      "pickup_and_route_issue": 16,
+      "account_and_promo_issue": 36,
+      "fare_and_payment_dispute": 26
+    },
+    "escalate_true": 130,
+    "escalate_false": 70
+  },
+  "intent_classification": {
+    "majority_class_baseline": {
+      "accuracy": 0.29,
+      "macro_f1": 0.0642,
+      "per_class": {
+        "cancellation_issue": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 27
+        },
+        "fare_and_payment_dispute": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 26
+        },
+        "lost_item": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 16
+        },
+        "driver_conduct_and_safety": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 21
+        },
+        "pickup_and_route_issue": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 16
+        },
+        "account_and_promo_issue": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 36
+        },
+        "out_of_scope_or_unclear": {
+          "precision": 0.29,
+          "recall": 1.0,
+          "f1": 0.4496,
+          "support": 58
+        }
+      }
+    },
+    "tfidf_logreg_baseline": {
+      "accuracy": 0.71,
+      "macro_f1": 0.7238,
+      "per_class": {
+        "cancellation_issue": {
+          "precision": 0.8333,
+          "recall": 0.9259,
+          "f1": 0.8772,
+          "support": 27
+        },
+        "fare_and_payment_dispute": {
+          "precision": 0.6471,
+          "recall": 0.8462,
+          "f1": 0.7333,
+          "support": 26
+        },
+        "lost_item": {
+          "precision": 0.6364,
+          "recall": 0.875,
+          "f1": 0.7368,
+          "support": 16
+        },
+        "driver_conduct_and_safety": {
+          "precision": 0.8333,
+          "recall": 0.7143,
+          "f1": 0.7692,
+          "support": 21
+        },
+        "pickup_and_route_issue": {
+          "precision": 0.55,
+          "recall": 0.6875,
+          "f1": 0.6111,
+          "support": 16
+        },
+        "account_and_promo_issue": {
+          "precision": 0.8387,
+          "recall": 0.7222,
+          "f1": 0.7761,
+          "support": 36
+        },
+        "out_of_scope_or_unclear": {
+          "precision": 0.6444,
+          "recall": 0.5,
+          "f1": 0.5631,
+          "support": 58
+        }
+      },
+      "vocab_size": 5000
+    },
+    "ai_agent": {
+      "accuracy": 0.87,
+      "macro_f1": 0.8628,
+      "per_class": {
+        "cancellation_issue": {
+          "precision": 0.92,
+          "recall": 0.8519,
+          "f1": 0.8846,
+          "support": 27
+        },
+        "fare_and_payment_dispute": {
+          "precision": 0.8462,
+          "recall": 0.8462,
+          "f1": 0.8462,
+          "support": 26
+        },
+        "lost_item": {
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333,
+          "support": 16
+        },
+        "driver_conduct_and_safety": {
+          "precision": 0.75,
+          "recall": 0.8571,
+          "f1": 0.8,
+          "support": 21
+        },
+        "pickup_and_route_issue": {
+          "precision": 0.7,
+          "recall": 0.875,
+          "f1": 0.7778,
+          "support": 16
+        },
+        "account_and_promo_issue": {
+          "precision": 0.8537,
+          "recall": 0.9722,
+          "f1": 0.9091,
+          "support": 36
+        },
+        "out_of_scope_or_unclear": {
+          "precision": 0.96,
+          "recall": 0.8276,
+          "f1": 0.8889,
+          "support": 58
+        }
+      },
+      "model": "gemini-flash-lite-latest"
+    }
+  },
+  "escalation_decision": {
+    "ai_agent": {
+      "accuracy": 0.85,
+      "escalate_class_precision": 0.9386,
+      "escalate_class_recall": 0.8231,
+      "escalate_class_f1": 0.877,
+      "note": "This IS the primary Step 7/8 escalation evaluation -- should_escalate came directly from the agent's own reasoning over retrieved evidence, not a derived default-policy lookup (contrast with the baselines' escalation_supplementary metric, which is only a rough approximation)."
+    },
+    "baseline_note": "Baselines have no learned escalation model -- baseline_*.json's 'escalation_supplementary' metric is a rough default-policy-lookup approximation, not a fair comparison point. The AI agent's escalation_decision above is the only real learned escalation evaluation in this project."
+  },
+  "headline_comparison_table": {
+    "test_set": "data/golden/golden_evaluation_set.json",
+    "test_set_size": 200,
+    "majority_class_baseline": {
+      "accuracy": 0.29,
+      "macro_f1": 0.0642
+    },
+    "tfidf_logreg_baseline": {
+      "accuracy": 0.71,
+      "macro_f1": 0.7238
+    },
+    "ai_agent": {
+      "accuracy": 0.87,
+      "macro_f1": 0.8628,
+      "escalation_accuracy": 0.85
+    }
+  },
+  "response_quality": {
+    "llm_judge_mean_scores": {
+      "n_scored": 200,
+      "mean_scores": {
+        "correctness": 4.545,
+        "groundedness": 4.66,
+        "helpfulness": 4.525,
+        "safety": 4.92,
+        "brand_consistency": 4.805,
+        "tone": 4.765
+      }
+    },
+    "human_agreement": {
+      "n_examples": 50,
+      "pooled": {
+        "n_score_pairs": 300,
+        "mean_absolute_disagreement": 0.67,
+        "spearman_r": 0.4363,
+        "spearman_p": 0.0,
+        "weighted_kappa": 0.3854,
+        "exact_match_rate": 0.46,
+        "within_1_point_rate": 0.8733
+      },
+      "primary_statistic": "mean_absolute_disagreement",
+      "note": "MAD is reported as primary because some dimensions (e.g. safety) have low score variance, making Spearman/kappa statistically unstable there -- see Decision 16."
+    }
+  },
+  "notes": [
+    "Baselines are trained on Step 5's heuristic pseudo-labels (measured 74% agreement with true gold labels), not gold labels -- their accuracy partly reflects weak-label quality, not just model capability. See Decision 12.",
+    "AI agent escalation accuracy reflects a diagnosed prompt fix (Decision 14): 76.0% -> 85.0%. Pre-fix results are preserved as data/results/ai_agent_results_v1_baseline.json for the record.",
+    "Response-quality human agreement uses a single self-rater (the developer), not a diverse human pool -- see Decision 16 and docs/response_quality_rubric.md."
+  ]
+}

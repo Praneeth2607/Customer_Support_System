@@ -1,0 +1,160 @@
+{
+  "n_examples": 50,
+  "dimensions": [
+    "correctness",
+    "groundedness",
+    "helpfulness",
+    "safety",
+    "brand_consistency",
+    "tone"
+  ],
+  "per_dimension": {
+    "correctness": {
+      "n": 50,
+      "mean_absolute_disagreement": 0.96,
+      "spearman_r": 0.4287,
+      "spearman_p": 0.0019,
+      "weighted_kappa": 0.2968,
+      "human_score_distribution": {
+        "1": 0,
+        "2": 3,
+        "3": 17,
+        "4": 18,
+        "5": 12
+      },
+      "judge_score_distribution": {
+        "1": 0,
+        "2": 3,
+        "3": 8,
+        "4": 4,
+        "5": 35
+      },
+      "human_unique_values": 4,
+      "judge_unique_values": 4
+    },
+    "groundedness": {
+      "n": 50,
+      "mean_absolute_disagreement": 0.52,
+      "spearman_r": 0.4432,
+      "spearman_p": 0.0013,
+      "weighted_kappa": 0.4831,
+      "human_score_distribution": {
+        "1": 0,
+        "2": 1,
+        "3": 8,
+        "4": 13,
+        "5": 28
+      },
+      "judge_score_distribution": {
+        "1": 1,
+        "2": 1,
+        "3": 3,
+        "4": 3,
+        "5": 42
+      },
+      "human_unique_values": 4,
+      "judge_unique_values": 5
+    },
+    "helpfulness": {
+      "n": 50,
+      "mean_absolute_disagreement": 1.0,
+      "spearman_r": 0.4701,
+      "spearman_p": 0.0006,
+      "weighted_kappa": 0.2955,
+      "human_score_distribution": {
+        "1": 0,
+        "2": 3,
+        "3": 20,
+        "4": 25,
+        "5": 2
+      },
+      "judge_score_distribution": {
+        "1": 1,
+        "2": 1,
+        "3": 8,
+        "4": 11,
+        "5": 29
+      },
+      "human_unique_values": 4,
+      "judge_unique_values": 5
+    },
+    "safety": {
+      "n": 50,
+      "mean_absolute_disagreement": 0.22,
+      "spearman_r": -0.0822,
+      "spearman_p": 0.5702,
+      "weighted_kappa": -0.0684,
+      "human_score_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 6,
+        "5": 43
+      },
+      "judge_score_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 1,
+        "5": 48
+      },
+      "human_unique_values": 3,
+      "judge_unique_values": 3
+    },
+    "brand_consistency": {
+      "n": 50,
+      "mean_absolute_disagreement": 0.36,
+      "spearman_r": 0.2117,
+      "spearman_p": 0.14,
+      "weighted_kappa": 0.2636,
+      "human_score_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 17,
+        "5": 32
+      },
+      "judge_score_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 5,
+        "5": 43
+      },
+      "human_unique_values": 3,
+      "judge_unique_values": 3
+    },
+    "tone": {
+      "n": 50,
+      "mean_absolute_disagreement": 0.96,
+      "spearman_r": 0.3382,
+      "spearman_p": 0.0163,
+      "weighted_kappa": 0.2087,
+      "human_score_distribution": {
+        "1": 0,
+        "2": 2,
+        "3": 12,
+        "4": 28,
+        "5": 8
+      },
+      "judge_score_distribution": {
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 11,
+        "5": 37
+      },
+      "human_unique_values": 4,
+      "judge_unique_values": 4
+    }
+  },
+  "pooled": {
+    "n_score_pairs": 300,
+    "mean_absolute_disagreement": 0.67,
+    "spearman_r": 0.4363,
+    "spearman_p": 0.0,
+    "weighted_kappa": 0.3854,
+    "exact_match_rate": 0.46,
+    "within_1_point_rate": 0.8733
+  }
+}

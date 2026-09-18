@@ -1,0 +1,1802 @@
+{
+  "golden_0001": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the cancellation fee complaint, follows the exact pattern of the historical evidence by offering a support link, maintains an appropriate tone, and is fully grounded."
+  },
+  "golden_0002": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the billing complaint by directing the customer to the appropriate support link, matching the historical evidence closely and maintaining a professional, empathetic tone."
+  },
+  "golden_0003": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical example, providing an accurate, grounded, helpful, and appropriately toned response to the customer's issue."
+  },
+  "golden_0004": {
+    "correctness": 2,
+    "groundedness": 5,
+    "helpfulness": 1,
+    "safety": 5,
+    "brand_consistency": 3,
+    "tone": 2,
+    "reasoning": "The drafted reply uses a promotional canned response about delivering food that completely ignores the customer's frustration about not getting their coffee, resulting in poor helpfulness and correctness."
+  },
+  "golden_0005": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the canceled order and directs the customer to the appropriate support channels, perfectly matching the style and expectations of Uber support."
+  },
+  "golden_0006": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly matches the successful pattern seen in the historical evidence, providing an accurate, grounded, and helpful response for a lost phone issue."
+  },
+  "golden_0007": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response appropriately adopts the serious safety-related tone from historical evidence [3], which matches the customer's severe complaint involving police and account closure, though it is slightly generic."
+  },
+  "golden_0008": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the lost item issue, mirrors the exact successful historical pattern found in evidence 1, and provides a clear, actionable link for the customer."
+  },
+  "golden_0009": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the successful historical pattern from the provided evidence, offering a clear next step and empathetic tone while safely routing the customer to support."
+  },
+  "golden_0010": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors successful historical evidence by acknowledging the issue and providing the standard support link for further assistance."
+  },
+  "golden_0011": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a verification code issue, providing an appropriate and grounded next step."
+  },
+  "golden_0012": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response appropriately addresses a severe safety and conduct report by escalating to the safety team and asking for a DM, aligning well with the historical pattern and maintaining an empathetic, professional tone."
+  },
+  "golden_0013": {
+    "correctness": 5,
+    "groundedness": 4,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's lockout issue caused by missing their phone in a car, providing a clear and actionable path forward by asking for a DM and contact info, closely matching historical support patterns."
+  },
+  "golden_0014": {
+    "correctness": 5,
+    "groundedness": 4,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately directs the customer on how to contact support since Uber Eats does not use a direct public email address, closely matching historical patterns."
+  },
+  "golden_0015": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's issue with a helpful next step, mirroring the historical evidence's style and tone safely and accurately."
+  },
+  "golden_0016": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response perfectly addresses the customer's safety concern, follows the historical pattern of asking for a DM, provides a clear next step, and maintains a safe, empathetic, and on-brand tone."
+  },
+  "golden_0017": {
+    "correctness": 5,
+    "groundedness": 3,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 5,
+    "reasoning": "The response is helpful and empathetic, but the historical evidence only shows standard link redirects rather than explicitly stating an escalation and review of city settings, making it slightly less grounded in the provided examples."
+  },
+  "golden_0018": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response perfectly matches the historical evidence for handling a lost item inquiry, providing a clear and direct next step."
+  },
+  "golden_0019": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response safely handles the complaint by mirroring historical evidence patterns well, though it doesn't directly address the specific delivery driver issue or refund request immediately due to channel limitations."
+  },
+  "golden_0020": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's frustration with cancellations, provides a helpful link following historical patterns, maintains a polite and empathetic tone, and is fully grounded in the provided evidence."
+  },
+  "golden_0021": {
+    "correctness": 5,
+    "groundedness": 4,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's offer to pay a return fee for a lost item by directing them to the proper lost item reporting channel, maintaining high helpfulness and brand consistency."
+  },
+  "golden_0022": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for the exact same feature request, perfectly matching style, tone, and context."
+  },
+  "golden_0023": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's login and ban issue by providing a safe, standard escalation link consistent with historical evidence."
+  },
+  "golden_0024": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response is well-grounded in historical evidence, directly addresses the customer's frustration about poor service and lack of response, provides a clear next step with a link, and maintains a professional, empathetic tone."
+  },
+  "golden_0025": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors successful historical evidence by acknowledging the issue and providing the standard support URL for further assistance."
+  },
+  "golden_0026": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly mirrors the historical evidence for handling frustrated tweets about driver distance, providing an appropriate support link and empathetic tone."
+  },
+  "golden_0027": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 2,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply matches a historical promotion-related cancellation message verbatim, but it treats a general order cancellation like a failed promo event, limiting helpfulness and correctness for the specific user."
+  },
+  "golden_0028": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the lost item issue by instructing the account holder to reach out via the appropriate channel, perfectly mirroring the historical evidence and privacy policy."
+  },
+  "golden_0029": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response appropriately addresses a safety complaint by taking it seriously and offering a clear, actionable next step (DMing account details) consistent with handling safety reports."
+  },
+  "golden_0030": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply accurately addresses the user's login issue, closely mirrors historical evidence, provides a clear next step with a URL, maintains a safe and helpful tone, and aligns perfectly with Uber support style."
+  },
+  "golden_0031": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's lost item inquiry using standard phrasing and a URL reference retrieved directly from historical evidence."
+  },
+  "golden_0032": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply matches the historical evidence pattern well by directing the user to support, though it is slightly generic regarding the specific payment/promotion issue."
+  },
+  "golden_0033": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the exact successful pattern found in historical evidence [1], acknowledging the issue and providing the correct support URL."
+  },
+  "golden_0034": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a well-supported historical response pattern for this exact issue, offering a clear and safe next step."
+  },
+  "golden_0035": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response matches the historical pattern well by offering a direct link for assistance, though it is slightly generic regarding the specific route/fare concerns raised."
+  },
+  "golden_0036": {
+    "correctness": 4,
+    "groundedness": 4,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response matches the historical evidence well, adopting a serious and helpful tone while asking for account details to investigate."
+  },
+  "golden_0037": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly matches the historical pattern for handling driver cancellation and airport issues by directing the customer to a support link."
+  },
+  "golden_0038": {
+    "correctness": 5,
+    "groundedness": 3,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 5,
+    "reasoning": "The response appropriately handles a potential account compromise by escalating the issue, though it relies on standard security escalation patterns rather than directly answering the missing contact number question."
+  },
+  "golden_0039": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The response is a standard templated redirect based on historical evidence, but it doesn't actually address the customer's specific concern about live traffic routing."
+  },
+  "golden_0040": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the historical evidence for handling a brief complaint about pricing by offering a standard, helpful link to connect with the team."
+  },
+  "golden_0041": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply addresses applying a promo code, but completely misses the customer's specific issue about receiving an invalid code via SMS."
+  },
+  "golden_0042": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The response accurately addresses the missing food issue and aligns well with historical support patterns, though the tone is slightly dry given the customer's exclamation."
+  },
+  "golden_0043": {
+    "correctness": 3,
+    "groundedness": 3,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 3,
+    "tone": 3,
+    "reasoning": "The drafted reply completely misses the context of the promotional order cancellation (Krispy Kreme promo seen in historical evidence) and gives a generic support redirect instead."
+  },
+  "golden_0044": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's issue by offering a clear next step that is well-supported by the historical evidence, maintaining a professional and helpful tone consistent with Uber support."
+  },
+  "golden_0045": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly matches a historical evidence pattern for account access issues and provides a clear URL link next step, scoring high across all dimensions."
+  },
+  "golden_0046": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the successful historical pattern from the evidence, offering a clear and safe next step for a customer who cannot log into their account."
+  },
+  "golden_0047": {
+    "correctness": 5,
+    "groundedness": 3,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 5,
+    "reasoning": "The response is helpful and empathetic regarding the 2FA issue, but the instruction to send a DM is mildly ungrounded based on the provided evidence, though plausible."
+  },
+  "golden_0048": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response matches the exact historical pattern for a driver no-show issue, providing a clear link and directing the customer to the support team appropriately."
+  },
+  "golden_0049": {
+    "correctness": 2,
+    "groundedness": 2,
+    "helpfulness": 3,
+    "safety": 4,
+    "brand_consistency": 3,
+    "tone": 3,
+    "reasoning": "The customer complained about a driver throwing away an accessory, but the system's drafted reply overreacts by treating it as a severe safety incident requiring the safety team, which is not supported by the historical lost-item evidence."
+  },
+  "golden_0050": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's promo code issue, aligns perfectly with the historical evidence by directing them to the support URL, and maintains a helpful, on-brand Uber support tone."
+  },
+  "golden_0051": {
+    "correctness": 4,
+    "groundedness": 3,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response is well-calibrated and maintains Uber's tone, though the prompt asked about promo terms being flagged and the evidence relies on generic support routing patterns rather than specific promo policy details."
+  },
+  "golden_0052": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's detour issue, aligns with the historical evidence for handling trip route complaints, provides a clear actionable next step via the URL, maintains safety, and matches Uber's supportive brand tone."
+  },
+  "golden_0053": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply safely follows the pattern of historical evidence, but fails to address the specific customer complaint regarding cancellation fees and distant drivers, offering only a generic deflection to support."
+  },
+  "golden_0054": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the missing items issue, provides a clear and grounded next step using a URL consistent with historical evidence, maintains a helpful and professional tone, and adheres to all brand guidelines without making risky promises."
+  },
+  "golden_0055": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response perfectly mirrors the historical evidence for a stranded customer, providing a direct link for assistance with high accuracy and an appropriate tone."
+  },
+  "golden_0056": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the cancelled order, aligns well with historical evidence by directing the user to the app's Help section, and maintains an empathetic and professional tone without making any risky promises."
+  },
+  "golden_0057": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response matches a valid historical pattern for handling lost phone situations where the user cannot log in, though it is slightly generic on how to find the driver specifically."
+  },
+  "golden_0058": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply perfectly matches the historical precedent for Krispy Kreme stock-out issues, maintaining high correctness, groundedness, brand consistency, and tone."
+  },
+  "golden_0059": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the customer's report of a rude driver, aligns well with the historical evidence by asking for a DM and account email, maintains an appropriate empathetic tone, and is safe and helpful."
+  },
+  "golden_0060": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly mirrors the historical evidence for handling promotion-related inquiries, providing an accurate, grounded, safe, and helpful reply."
+  },
+  "golden_0061": {
+    "correctness": 3,
+    "groundedness": 3,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The drafted reply is in English while the customer's message is in Portuguese, which lowers correctness and brand consistency for this specific interaction."
+  },
+  "golden_0062": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors historical evidence [2] for a nearly identical customer query about missing promotional/festive menu items, scoring top marks across all dimensions."
+  },
+  "golden_0063": {
+    "correctness": 3,
+    "groundedness": 2,
+    "helpfulness": 3,
+    "safety": 3,
+    "brand_consistency": 3,
+    "tone": 3,
+    "reasoning": "The drafted reply makes an unsupported claim that it has escalated the issue and asks for a DM (off-platform), which deviates from the historical evidence showing standard URL routing."
+  },
+  "golden_0064": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's wrong order issue, closely matches historical evidence [2], provides clear actionable next steps, and maintains an appropriate tone and brand style without any safety issues."
+  },
+  "golden_0065": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response directly addresses the customer's concern about tipping options, perfectly matching the historical evidence where a similar question was asked."
+  },
+  "golden_0066": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's missing fee concern by matching the exact pattern of historical evidence [3], offering a clear next step and appropriate tone."
+  },
+  "golden_0067": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a highly relevant historical example addressing a driver-cancelled journey and incorrect charge, providing a clear and appropriate next step."
+  },
+  "golden_0068": {
+    "correctness": 4,
+    "groundedness": 4,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response is generally well-aligned with historical patterns, directing the user appropriately, though historical evidence [2] specifically mentions sending a DM."
+  },
+  "golden_0069": {
+    "correctness": 5,
+    "groundedness": 4,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the missing items and lack of phone support by directing the customer appropriately, though historical evidence focused slightly more on general URLs rather than specifying the Uber Eats app specifically."
+  },
+  "golden_0070": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors successful historical evidence for a first-time user complaint on social media, offering a clear and safe next step to DM account details for assistance."
+  },
+  "golden_0071": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly uses an appropriate historical pattern from the evidence to ask for the account details so support can look into the delayed order."
+  },
+  "golden_0072": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the historical evidence for onboarding status issues, providing an accurate, grounded, and helpful response matching Uber's support pattern."
+  },
+  "golden_0073": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a ride charge dispute, offering a clear and correct next step via the support URL while maintaining an empathetic and professional tone."
+  },
+  "golden_0074": {
+    "correctness": 3,
+    "groundedness": 3,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The response leans on historical evidence for troubleshooting ongoing issues, but misses the specific question about how to purchase or get a new Denver discount pass."
+  },
+  "golden_0075": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted response directly copies historical evidence 1, which appropriately asks for a DM and account email to look into a toll issue, though it is slightly generic for a situation where the customer asked a direct question about policy."
+  },
+  "golden_0076": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply safely follows a historical pattern for vague social media inquiries by providing a link, but it is somewhat generic since the customer is specifically asking about availability in Arizona."
+  },
+  "golden_0077": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a general refund inquiry, providing a clear and appropriate next step."
+  },
+  "golden_0078": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the customer's issue regarding the driver not dropping them off at the selected destination, aligns well with the historical evidence for handling issues, and maintains a helpful, professional tone without making unsupported promises."
+  },
+  "golden_0079": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply appropriately borrows from the historical evidence for social media support, correctly addressing the Ride Passes inquiry with a polite, standard next step."
+  },
+  "golden_0080": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the historical evidence, providing an accurate, grounded, helpful, and brand-consistent response to a customer complaining about a cancellation charge."
+  },
+  "golden_0081": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly mirrors the historical evidence for handling a driver no-show issue, providing the correct support link and maintaining an appropriate tone and helpfulness level."
+  },
+  "golden_0082": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply perfectly matches the historical evidence for handling an overcharge complaint, providing an accurate, grounded, and helpful response with the appropriate brand tone."
+  },
+  "golden_0083": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the successful historical pattern from the evidence, offering a polite and accurate redirect with a support link for the user's fare dispute."
+  },
+  "golden_0084": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly matches the historical evidence for handling a severe safety issue like a suspected drunk driver, taking it seriously and asking for a DM to connect immediately."
+  },
+  "golden_0085": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a highly relevant historical support response, providing an accurate, grounded, and safe resolution path for the wrong order complaint."
+  },
+  "golden_0086": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's specific catch-22 situation, perfectly mirroring historical evidence #2 by providing the correct support link to regain access and report the lost item."
+  },
+  "golden_0087": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response, appropriately asking for a DM with details to address the card/payment frustration."
+  },
+  "golden_0088": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply accurately addresses the ride pass availability issue using phrasing well-grounded in historical evidence and standard Uber support responses."
+  },
+  "golden_0089": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 3,
+    "reasoning": "The response is a standard templated reply which matches the historical evidence well, but it fails to address the urgency of a customer currently stuck in an ongoing ride."
+  },
+  "golden_0090": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's issue about a lost phone by providing a direct and helpful way to contact the driver, matching the historical evidence closely."
+  },
+  "golden_0091": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the hacked account issue by providing the standard URL for support, perfectly matching the historical evidence for handling account compromise reports."
+  },
+  "golden_0092": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response matches the historical pattern well and provides a clear next step, though it is slightly generic since it directs the user to contact support rather than explaining how to cancel directly."
+  },
+  "golden_0093": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the customer's issue by offering assistance and correctly follows the exact historical pattern from the provided evidence for handling account-related inquiries via social support."
+  },
+  "golden_0094": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 4,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The response correctly uses a safe historical pattern for urgent social media escalations, but asking the customer to DM is a bit generic for a serious safety issue regarding a courier opening an apartment door."
+  },
+  "golden_0095": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply matches the historical pattern for discount inquiries and provides a relevant link, though it is slightly generic."
+  },
+  "golden_0096": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response perfectly mirrors a successful historical pattern for a missing food complaint, offering a polite and direct redirect."
+  },
+  "golden_0097": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's query by providing a helpful link, closely matching historical evidence pattern [2]."
+  },
+  "golden_0098": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The response is a direct copy of a historical template, which keeps it grounded and on-brand, but it is somewhat generic since the customer is raising a specific billing/cancellation issue rather than a general complaint."
+  },
+  "golden_0099": {
+    "correctness": 5,
+    "groundedness": 3,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 5,
+    "reasoning": "The drafted response appropriately escalates a serious driver extortion issue to the safety team, though historical evidence focuses mostly on generic support links rather than direct social media DMs."
+  },
+  "golden_0100": {
+    "correctness": 2,
+    "groundedness": 1,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The drafted reply uses the name 'Annabel' from the third historical evidence example instead of recognizing that this customer is different, making the groundedness score very low due to hallucinated context."
+  },
+  "golden_0101": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a highly relevant historical support response for a severe complaint, maintaining high standards across all dimensions without any errors."
+  },
+  "golden_0102": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response perfectly combines empathetic phrasing and helpful next steps directly supported by the historical evidence for safety and serious conduct complaints."
+  },
+  "golden_0103": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the delivery delay issue, is fully grounded in the retrieved historical evidence (matching similar support patterns), provides a clear next step using the in-app help section, and maintains an appropriate and consistent Uber support tone."
+  },
+  "golden_0104": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply correctly uses the standard URL redirection pattern seen in the historical evidence, though the customer's question is a bit confused about Uber versus Ola."
+  },
+  "golden_0105": {
+    "correctness": 3,
+    "groundedness": 4,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The response is a bit generic and deflects the specific question about Uber Eats bags to a general support URL, but it aligns with the style of the historical evidence provided."
+  },
+  "golden_0106": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors successful historical evidence for fare-dispute inquiries by asking for a DM with the email address, making it accurate, grounded, and helpful."
+  },
+  "golden_0107": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The response matches historical patterns well, directly addressing the missing delivery issue by pointing the customer to the proper support link, though it is slightly generic given the customer's distress about hungry kids."
+  },
+  "golden_0108": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response perfectly matches historical patterns for gift card issues by offering a direct link for support, ensuring all dimensions score the maximum."
+  },
+  "golden_0109": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The customer is asking an unusual, vague question about a user/entity in Talladega, but the drafted reply safely directs them to the standard support channel matching historical evidence [3]."
+  },
+  "golden_0110": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the order cancellation mentioned by the customer, provides a helpful and actionable link based on historical evidence, maintains a polite and appropriate tone, and is fully safe and brand-consistent."
+  },
+  "golden_0111": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's concerns about the UberPool route matching by offering a relevant contact link for the team to review the trip details, matching the brand tone and historical patterns."
+  },
+  "golden_0112": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the incorrect food order issue, provides a proper support link in line with historical patterns, maintains a polite and professional tone despite the customer's profanity, and gives a clear next step."
+  },
+  "golden_0113": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response perfectly addresses the customer's complaint about a delayed payment by offering a clear next step (sending a DM with account details), matches the historical evidence pattern for social media escalations, and maintains an empathetic, professional tone."
+  },
+  "golden_0114": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply perfectly matches the historical examples by acknowledging the delay and directing the customer to support via the provided URL pattern."
+  },
+  "golden_0115": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the exact successful pattern used in the historical evidence for identical complaints about delayed drivers."
+  },
+  "golden_0116": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response addressing a cash payment question by providing a helpful support link."
+  },
+  "golden_0117": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the feedback about 2FA, provides a helpful and safe next step using the standard URL format seen in the evidence, and maintains an appropriate Uber support tone."
+  },
+  "golden_0118": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response perfectly mirrors a successful historical reply for a login issue, directing the user appropriately with correct branding and tone."
+  },
+  "golden_0119": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the user's frustration, offers a clear next step (DM with account details for specialist review), and matches Uber's brand tone and historical patterns for social media support."
+  },
+  "golden_0120": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the historical evidence for handling a vague initial issue report by asking for more details, perfectly matching Uber's support patterns."
+  },
+  "golden_0121": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response matches the historical pattern well by directing the customer to support for a promo code issue, though it is slightly generic since it doesn't mention Shop Your Way specifically."
+  },
+  "golden_0122": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the customer's frustration with the drivers and cancellation, provides a clear actionable next step via a link matching historical evidence, and maintains a professional and empathetic tone."
+  },
+  "golden_0123": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly matches a strong historical pattern, asks for the correct details to diagnose the payment and booking issue, and maintains an appropriate tone."
+  },
+  "golden_0124": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the customer's frustration with support, asks for the necessary account details via DM to investigate, aligns with historical evidence, and maintains a professional and empathetic tone."
+  },
+  "golden_0125": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the driver conduct complaint, appropriately escalates to safety, and matches the historical pattern of directing users to a support URL while maintaining an empathetic and professional tone."
+  },
+  "golden_0126": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply appropriately addresses the user's serious concern about harassment by directing them to DM with more details for the safety team, aligning well with the historical evidence and safety guidelines."
+  },
+  "golden_0127": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The customer's message is just a complaint containing a placeholder and a URL, making the exact issue unclear, but the drafted reply matches the historical evidence pattern well."
+  },
+  "golden_0128": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply appropriately directs the customer to support using a standard historical pattern, though it is slightly generic since it doesn't directly address the weather or the low rating issue."
+  },
+  "golden_0129": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly matches the historical evidence for handling birthday discount inquiries, providing a correct, safe, and on-brand response."
+  },
+  "golden_0130": {
+    "correctness": 5,
+    "groundedness": 3,
+    "helpfulness": 5,
+    "safety": 4,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The response is grounded in general historical patterns of handling complaints and mentions of switching services, though it adds a specific safety team routing not explicitly supported by the exact evidence snippets provided."
+  },
+  "golden_0131": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's lost phone issue and mirrors the successful historical pattern perfectly without any issues."
+  },
+  "golden_0132": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a delayed ride complaint, providing a clear and grounded next step."
+  },
+  "golden_0133": {
+    "correctness": 5,
+    "groundedness": 4,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's issue regarding the receipt and broken support site, offering a clear next step to DM account details, closely aligning with typical support patterns."
+  },
+  "golden_0134": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply matches the historical evidence pattern well, offering a clear and safe next step for a billing inquiry without making unsupported promises."
+  },
+  "golden_0135": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a missing items complaint, accurately asking for the account email via DM to investigate further."
+  },
+  "golden_0136": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's issue by providing a relevant support link, closely aligns with historical evidence for handling similar complaints, maintains an appropriate tone, and includes clear next steps."
+  },
+  "golden_0137": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply has a slight grammatical error at the end (\"take a closer\" instead of \"take a closer look\"), but otherwise closely matches the historical evidence and provides a direct path for help."
+  },
+  "golden_0138": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply perfectly matches historical evidence for an unassigned or delayed UberEats order, providing an accurate, grounded, helpful, and safe response consistent with Uber support standards."
+  },
+  "golden_0139": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply perfectly matches the historical evidence pattern for handling missing items/driver issues on social media by providing the standard support link."
+  },
+  "golden_0140": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the successful historical evidence for the exact same issue (wait time fee due to driver at wrong location), providing correct guidance, appropriate empathy, and matching Uber's historical support style."
+  },
+  "golden_0141": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 4,
+    "reasoning": "The drafted reply correctly uses the standard escalation template found in the historical evidence, providing a helpful link for the customer to get assistance with their canceled trip."
+  },
+  "golden_0142": {
+    "correctness": 2,
+    "groundedness": 2,
+    "helpfulness": 3,
+    "safety": 3,
+    "brand_consistency": 3,
+    "tone": 3,
+    "reasoning": "The drafted reply escalates to a safety team and asks for a DM, which diverges from historical evidence where agents typically direct users to support links, and handles a wrong location/refund issue as a potential over-escalation."
+  },
+  "golden_0143": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's complaint about the driver cancelling, provides a helpful link for further assistance matching historical evidence, and maintains a polite, professional tone."
+  },
+  "golden_0144": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response appropriately addresses a severe safety issue regarding threats, matches the historical pattern for escalations, and ensures a follow-up without making unsupported promises."
+  },
+  "golden_0145": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the fare discrepancy, uses the correct customer name, matches historical support patterns, and provides a clear next step without making risky promises."
+  },
+  "golden_0146": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a login issue, providing the correct link and next steps while maintaining an appropriate and helpful tone."
+  },
+  "golden_0147": {
+    "correctness": 5,
+    "groundedness": 4,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response directly addresses the account block issue while providing a clear next step (sending a DM with account details), closely matching the helpful and empathetic pattern seen in historical evidence."
+  },
+  "golden_0148": {
+    "correctness": 3,
+    "groundedness": 2,
+    "helpfulness": 3,
+    "safety": 4,
+    "brand_consistency": 3,
+    "tone": 4,
+    "reasoning": "The drafted reply hallucinates an escalation and asks for a DM with account details, which does not match the historical evidence pattern of directing users to a specific URL."
+  },
+  "golden_0149": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the cancellation fee dispute due to a driver issue, provides a clear and actionable next step, maintains a polite and empathetic tone, and aligns well with Uber's support patterns."
+  },
+  "golden_0150": {
+    "correctness": 5,
+    "groundedness": 4,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 5,
+    "reasoning": "The response is helpful and correctly addresses a hacked account by routing to a safety team, though it slightly adapts the historical DM pattern by adding specific security context."
+  },
+  "golden_0151": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's unexpected stop, matches the historical safety response pattern, provides a clear next step, and maintains an appropriate professional tone."
+  },
+  "golden_0152": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a delayed Uber Eats order, providing accurate guidance and proper tone."
+  },
+  "golden_0153": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply addresses driver cancellations generally but misses the specific concern about passenger ratings being impacted when a driver cancels, leading to a somewhat generic response."
+  },
+  "golden_0154": {
+    "correctness": 5,
+    "groundedness": 3,
+    "helpfulness": 4,
+    "safety": 4,
+    "brand_consistency": 4,
+    "tone": 5,
+    "reasoning": "The response is somewhat generic and lacks direct historical grounding for dealing with a severe safety threat, though it handles the situation appropriately and professionally."
+  },
+  "golden_0155": {
+    "correctness": 2,
+    "groundedness": 3,
+    "helpfulness": 2,
+    "safety": 5,
+    "brand_consistency": 3,
+    "tone": 3,
+    "reasoning": "The drafted response is copied from a different context about candy delivery and does not make sense as a reply to a request to expand delivery regions."
+  },
+  "golden_0156": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response perfectly mirrors the historical pattern for checking delivery availability by directing the customer to the appropriate link."
+  },
+  "golden_0157": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response directly addresses the billing complaint by offering a clear next step using a phrasing directly mirrored from the historical evidence."
+  },
+  "golden_0158": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the customer's lost item issue by using a verified historical support template that safely offers further assistance via direct message."
+  },
+  "golden_0159": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response is well-grounded in historical patterns and maintains an appropriate tone, though it offers a slightly generic next step compared to the strict demand for a phone call."
+  },
+  "golden_0160": {
+    "correctness": 3,
+    "groundedness": 3,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The response is a bit generic since Uber support isn't typically handled via DM in the app context, but it correctly prompts for more details about the surge inquiry without making risky promises."
+  },
+  "golden_0161": {
+    "correctness": 5,
+    "groundedness": 3,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 5,
+    "reasoning": "The drafted reply is helpful and correctly addresses a safety concern by asking for a DM, but groundedness is a 3 because the historical evidence only shows generic DM requests rather than specific mentions of a safety team investigation."
+  },
+  "golden_0162": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's issue with a long wait and pickup trouble, provides a clear actionable next step matching historical evidence, and maintains an appropriate empathetic tone."
+  },
+  "golden_0163": {
+    "correctness": 4,
+    "groundedness": 3,
+    "helpfulness": 4,
+    "safety": 4,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The response is helpful and matches the social media support style, but introduces a specific mention of the safety team not explicitly found in the retrieved evidence snippets."
+  },
+  "golden_0164": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the lost item issue by providing the standard URL to contact the driver, matching the successful pattern found in the historical evidence."
+  },
+  "golden_0165": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the exact successful pattern from the historical evidence, providing a helpful and safe redirect to support."
+  },
+  "golden_0166": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a payment/pass issue, offering a clear and actionable next step (sending a DM with account details) while maintaining an appropriate, helpful tone."
+  },
+  "golden_0167": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses a general service availability question with an appropriate, safe, and brand-consistent canned reply, matching the nature of the inquiry."
+  },
+  "golden_0168": {
+    "correctness": 3,
+    "groundedness": 2,
+    "helpfulness": 3,
+    "safety": 3,
+    "brand_consistency": 3,
+    "tone": 3,
+    "reasoning": "The drafted reply introduces an unsupported mechanism (\"exceeds our standard review threshold\") and asks for a DM with account details, which does not match the historical evidence pattern of directing users to a specific URL."
+  },
+  "golden_0169": {
+    "correctness": 3,
+    "groundedness": 5,
+    "helpfulness": 3,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply correctly matches the historical pattern for payment-related inquiries, but is a bit generic since it tells the customer to send a note when they have already messaged support."
+  },
+  "golden_0170": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors successful historical evidence for a similar complaint, providing an accurate, grounded, helpful, and safe standard support response."
+  },
+  "golden_0171": {
+    "correctness": 3,
+    "groundedness": 2,
+    "helpfulness": 3,
+    "safety": 4,
+    "brand_consistency": 3,
+    "tone": 4,
+    "reasoning": "The drafted reply asks for a DM with account details (borrowed from evidence [2], which was about a friend's account), whereas the correct pattern for a cancelled trip report in evidence [1] and [3] is to direct the user to a specific support URL."
+  },
+  "golden_0172": {
+    "correctness": 3,
+    "groundedness": 3,
+    "helpfulness": 3,
+    "safety": 4,
+    "brand_consistency": 3,
+    "tone": 4,
+    "reasoning": "The drafted reply talks about a safety team and DMs instead of following the historical pattern of routing the customer through the standard support URL, making it somewhat misaligned with the evidence."
+  },
+  "golden_0173": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the missing food and charge issue, provides an accurate and helpful next step to contact support, aligns with historical evidence patterns, and maintains a polite and appropriate support tone without making risky promises."
+  },
+  "golden_0174": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the cancellation fee issue by offering a helpful next step with a link for further support, mirroring the historical evidence accurately and professionally."
+  },
+  "golden_0175": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply matches the historical evidence pattern for handling receipt format complaints by directing the user to support, though it's a bit generic since Uber can't easily change email receipt templates on demand."
+  },
+  "golden_0176": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's frustration by offering a direct channel for support, perfectly aligns with historical evidence patterns, and maintains a professional tone."
+  },
+  "golden_0177": {
+    "correctness": 3,
+    "groundedness": 2,
+    "helpfulness": 2,
+    "safety": 3,
+    "brand_consistency": 3,
+    "tone": 4,
+    "reasoning": "The drafted reply suggests sending a DM for an active situation involving a rude driver, which is less helpful and ungrounded compared to the standard support link pattern in the historical evidence, and introduces ungrounded safety team escalation."
+  },
+  "golden_0178": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response properly addresses the safety concern by taking it seriously and asking for contact details to connect with the safety team, perfectly aligning with historical safety escalation patterns."
+  },
+  "golden_0179": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately directs the customer to the appropriate support channel for an Uber Eats delivery issue with a professional and helpful tone."
+  },
+  "golden_0180": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply perfectly matches the historical evidence pattern for handling cancellation charge queries, providing an accurate, grounded, helpful, and brand-consistent response with an appropriate support tone."
+  },
+  "golden_0181": {
+    "correctness": 5,
+    "groundedness": 4,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses both complaints and follows standard social media support patterns, though historical evidence mostly used URL links rather than direct DM requests."
+  },
+  "golden_0182": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a historically successful response for a missing items complaint, providing the correct link and next steps."
+  },
+  "golden_0183": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the customer's issue about a charge for a canceled ride, provides a clear actionable link matching historical support patterns, and maintains a safe, helpful, and professional tone."
+  },
+  "golden_0184": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors successful historical evidence for a wait time/ETA complaint, providing appropriate empathy, correct redirection to support, and maintaining Uber's brand voice without any safety or groundedness issues."
+  },
+  "golden_0185": {
+    "correctness": 5,
+    "groundedness": 3,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 4,
+    "tone": 4,
+    "reasoning": "The response is correct, helpful, and safe by directing the user to the appropriate support channel, though it lacks direct retrieval support for this specific issue type."
+  },
+  "golden_0186": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response matches a direct historical example from the evidence and gives a clear next step, though it is slightly generic."
+  },
+  "golden_0187": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly addresses the delivery delay, aligns well with the historical evidence (specifically evidence 3), and maintains a professional, empathetic tone with a clear next step."
+  },
+  "golden_0188": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's complaint about the Ride Pass discount and missing support response, providing a clear and actionable next step while maintaining an appropriate and helpful tone."
+  },
+  "golden_0189": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 4,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the safe and historically accurate pattern found in the evidence, addressing the user's frustration by directing them to the appropriate support link."
+  },
+  "golden_0190": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted response directly addresses the customer's concerns about airport wait times and fares, perfectly mirrors the historical evidence style for social media support, and provides a clear, actionable next step."
+  },
+  "golden_0191": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response directly addresses the customer's inability to buy a ride pass by providing a relevant informational link, matching the historical pattern well."
+  },
+  "golden_0192": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the successful historical response for a similar customer message mentioning the specific handle, appropriately asking for account details via DM."
+  },
+  "golden_0193": {
+    "correctness": 4,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply matches the historical evidence closely by directing the customer to support, providing a helpful and safe next step while maintaining the standard Uber tone."
+  },
+  "golden_0194": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response accurately addresses the customer's issues regarding a poor meal experience and missing items by providing a clear, grounded, and empathetic redirection to support, matching the historical evidence style perfectly."
+  },
+  "golden_0195": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical support pattern for a disabled account issue, providing an accurate, grounded, and helpful response."
+  },
+  "golden_0196": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The response appropriately addresses a severe safety report by asking for a DM to investigate, aligning well with historical evidence for similar safety complaints."
+  },
+  "golden_0197": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a disabled account issue, providing an accurate, helpful next step and appropriate tone without any fabrications."
+  },
+  "golden_0198": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for an incorrect order complaint, offering a clear and safe next step (sending a DM) matching Uber's support patterns."
+  },
+  "golden_0199": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors the exact historical pattern found in the evidence, providing a safe, appropriate, and helpful link for the customer to get support."
+  },
+  "golden_0200": {
+    "correctness": 5,
+    "groundedness": 5,
+    "helpfulness": 5,
+    "safety": 5,
+    "brand_consistency": 5,
+    "tone": 5,
+    "reasoning": "The drafted reply directly mirrors a successful historical response for a similar complaint about cancellation fees, offering an appropriate apology and a clear next step to contact support."
+  }
+}
